@@ -1,0 +1,805 @@
+[06-Feb-2023 06:30:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Feb-2023 06:31:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Feb-2023 18:59:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[08-Feb-2023 10:33:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[08-Feb-2023 12:08:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-Feb-2023 13:53:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-Feb-2023 20:05:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-Feb-2023 23:09:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-Feb-2023 06:50:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-Feb-2023 06:50:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Feb-2023 19:59:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Feb-2023 13:39:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Feb-2023 22:45:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Feb-2023 09:48:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Feb-2023 09:48:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[25-Feb-2023 10:11:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[25-Feb-2023 10:12:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Mar-2023 06:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Mar-2023 06:31:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[10-Mar-2023 12:36:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[10-Mar-2023 12:36:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[18-Mar-2023 04:25:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[18-Mar-2023 04:25:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[26-Mar-2023 05:03:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[26-Mar-2023 05:04:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[27-Mar-2023 14:47:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[29-Mar-2023 13:11:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[29-Mar-2023 13:12:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Apr-2023 04:13:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Apr-2023 04:14:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Apr-2023 06:19:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-Apr-2023 03:42:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[18-Apr-2023 15:28:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[19-Apr-2023 06:55:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[19-Apr-2023 06:56:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[20-Apr-2023 20:33:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Apr-2023 03:21:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Apr-2023 21:48:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Apr-2023 21:48:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Apr-2023 21:49:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[27-Apr-2023 04:54:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[27-Apr-2023 04:54:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-May-2023 02:42:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-May-2023 03:55:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-May-2023 03:56:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-May-2023 00:17:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-May-2023 14:43:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-May-2023 15:10:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-May-2023 15:36:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-May-2023 16:45:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[12-May-2023 10:03:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-May-2023 03:08:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-May-2023 03:09:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-May-2023 05:36:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[21-May-2023 03:50:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[29-May-2023 03:56:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Jun-2023 20:14:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Jun-2023 20:15:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Jun-2023 03:26:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[12-Jun-2023 18:18:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-Jun-2023 05:46:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-Jun-2023 05:48:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Jun-2023 08:52:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[30-Jun-2023 05:55:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[08-Jul-2023 06:23:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Jul-2023 02:51:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Jul-2023 02:51:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Jul-2023 03:33:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Jul-2023 13:29:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[31-Jul-2023 08:26:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-Aug-2023 13:34:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Aug-2023 02:49:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Aug-2023 02:51:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Aug-2023 02:51:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Aug-2023 02:51:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Aug-2023 13:14:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Aug-2023 22:53:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[24-Aug-2023 07:59:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Aug-2023 05:40:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[04-Sep-2023 20:57:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-Sep-2023 05:56:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-Sep-2023 20:44:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-Sep-2023 20:45:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-Sep-2023 05:05:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[21-Sep-2023 04:19:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[21-Sep-2023 20:40:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[24-Sep-2023 12:24:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[27-Sep-2023 14:45:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[29-Sep-2023 05:06:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[04-Oct-2023 00:36:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[07-Oct-2023 05:41:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[08-Oct-2023 14:30:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Oct-2023 06:36:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Oct-2023 06:36:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Oct-2023 06:37:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Oct-2023 07:10:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[24-Oct-2023 19:12:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[30-Oct-2023 13:35:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[31-Oct-2023 02:43:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[31-Oct-2023 02:44:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[31-Oct-2023 02:44:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[31-Oct-2023 23:23:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[07-Nov-2023 05:31:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Nov-2023 05:25:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Nov-2023 13:03:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Nov-2023 04:39:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[30-Nov-2023 20:40:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[01-Dec-2023 06:41:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Dec-2023 08:39:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[09-Dec-2023 10:17:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[16-Dec-2023 16:33:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[17-Dec-2023 03:10:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[25-Dec-2023 05:01:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[25-Dec-2023 05:01:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[25-Dec-2023 05:02:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Jan-2024 04:33:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[10-Jan-2024 08:50:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Jan-2024 18:38:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[18-Jan-2024 05:47:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[18-Jan-2024 05:47:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[23-Jan-2024 22:33:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[26-Jan-2024 04:24:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[29-Jan-2024 14:12:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[02-Feb-2024 19:14:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Feb-2024 05:07:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Feb-2024 05:08:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-Feb-2024 07:32:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Feb-2024 17:07:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[19-Feb-2024 06:56:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[27-Feb-2024 04:14:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Mar-2024 03:51:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[14-Mar-2024 02:51:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Mar-2024 01:38:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Mar-2024 01:38:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[22-Mar-2024 01:39:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[30-Mar-2024 03:40:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[07-Apr-2024 02:46:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[07-Apr-2024 19:27:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-Apr-2024 15:57:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[13-Apr-2024 19:40:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[15-Apr-2024 02:21:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-May-2024 12:24:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[03-Jun-2024 14:51:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[08-Oct-2024 02:06:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[17-Oct-2024 01:47:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[05-Nov-2024 22:57:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Nov-2024 03:58:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Nov-2024 03:59:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Nov-2024 04:50:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Nov-2024 04:51:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[06-Nov-2024 15:10:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[07-Nov-2024 04:20:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-Nov-2024 23:20:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[11-Nov-2024 23:28:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[21-Nov-2024 02:30:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 03:34:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 07:20:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 07:20:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 08:53:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 14:40:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
+[28-Nov-2024 14:41:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/biobioco/public_html/api-bio/objects/versiones_apps.php:35
+Stack trace:
+#0 /home/biobioco/public_html/api-bio/versiones/read.php(21): versiones_apps->read()
+#1 {main}
+  thrown in /home/biobioco/public_html/api-bio/objects/versiones_apps.php on line 35
