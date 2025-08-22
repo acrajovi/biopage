@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	if(form) {
 		form.addEventListener('submit', function(e) {
 			e.preventDefault();
+
 			const formData = new FormData(form);
+
 			fetch('https://api.bio.com.py/contact/contact.php', {
 				method: 'POST',
-				body: formData
+				body: formData,
+				credentials: 'include' // 🔑 importante para que funcione con Allow-Credentials
 			})
 			.then(res => res.text())
 			.then(data => {
@@ -24,4 +27,3 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 });
-// ...aquí van todos los scripts que estaban en templatemo-electric-xtra.js...
