@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		form.addEventListener('submit', function(e) {
 			e.preventDefault();
 			const formData = new FormData(form);
-			fetch('inc/contact.php', {
+			fetch('https://api.bio.com.py/contact/contact.php', {
 				method: 'POST',
 				body: formData
 			})
