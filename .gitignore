@@ -1,2 +1,5 @@
 # Ignorar archivos de sistema de macOS
 .DS_Store
+
+# React Component Preview
+previewConfig.json
