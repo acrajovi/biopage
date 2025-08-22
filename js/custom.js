@@ -12,17 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
 			fetch('https://api.bio.com.py/contact/contact.php', {
 				method: 'POST',
 				body: formData,
-				credentials: 'include' // 🔑 importante para que funcione con Allow-Credentials
+				credentials: 'include' // 🔑 necesario porque PHP usa Allow-Credentials
 			})
-			.then(res => res.text())
+			.then(res => {
+				if (!res.ok) throw new Error("Error HTTP " + res.status);
+				return res.text();
+			})
 			.then(data => {
 				msgDiv.innerHTML = data;
 				if (data.includes('success_page')) {
 					form.reset();
 				}
 			})
-			.catch(() => {
-				msgDiv.innerHTML = '<div class="error_message">Error al enviar el mensaje. Intenta de nuevo.</div>';
+			.catch(err => {
+				msgDiv.innerHTML = '<div class="error_message">Error de conexión: ' + err.message + '</div>';
 			});
 		});
 	}
