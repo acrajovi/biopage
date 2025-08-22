@@ -2,7 +2,6 @@
 class Database{
  
     // specify your own database credentials
-    //private $host = "65.60.62.226";
     private $host = "bio.com.py";
     private $db_name = "biobioco_rucpy";
     private $username = "biobioco_rest";
