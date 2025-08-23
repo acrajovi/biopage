@@ -164,12 +164,6 @@
             border-bottom: 1px solid rgba(255, 94, 0, 0.1);
         }
 
-        nav.scrolled {
-            padding: 15px 50px;
-            background: rgba(10, 10, 10, 0.95);
-            box-shadow: 0 5px 30px rgba(255, 94, 0, 0.2);
-        }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -650,26 +644,6 @@
             font-size: 1.1rem;
         }
 
-        .feature-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .feature-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            opacity: 0.8;
-        }
-
-        .feature-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #FF5E00;
-            font-size: 1.2rem;
-        }
-
         /* About Section */
         .about {
             padding: 100px 20px;
@@ -861,6 +835,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Orbitron', monospace;
+            margin-top: 15px;
         }
 
         .submit-btn:hover {
@@ -925,26 +900,6 @@
             overflow: hidden;
         }
 
-        .map-placeholder {
-            text-align: center;
-            opacity: 0.6;
-        }
-
-        .map-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 40%, rgba(255, 94, 0, 0.1) 50%, transparent 60%);
-            animation: scan 3s linear infinite;
-        }
-
-        @keyframes scan {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
         /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.8);
@@ -956,25 +911,6 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
-            color: #FF5E00;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            color: #00B2FF;
-            text-shadow: 0 0 10px currentColor;
         }
 
         .copyright {
@@ -1323,112 +1259,6 @@
     object-fit: contain !important;
   }
 }
-@media (min-width: 811px) and (max-width: 1199px) {
-  .bioshop-grid {
-    display: grid !important;
-    grid-template-columns: 320px 1fr;
-    gap: 32px;
-    align-items: flex-start;
-  }
-  .bioshop-images-col {
-    width: 320px !important;
-    min-width: 180px !important;
-    max-width: 340px !important;
-    gap: 24px !important;
-  }
-  .bioshop-graphic-alt {
-    max-width: 320px !important;
-    min-width: 160px !important;
-    width: 100% !important;
-    margin-bottom: 18px !important;
-    padding: 12px 6px !important;
-  }
-  .bioshop-graphic-alt img {
-    max-width: 180px !important;
-    width: 100% !important;
-    margin: 0 auto 10px auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-  .bioshop-desc-col {
-    min-width: 220px !important;
-    max-width: 600px !important;
-    width: 100% !important;
-    margin-top: 0 !important;
-  }
-}
-@media (min-width: 1200px) {
-  .bioshop-grid {
-    display: grid !important;
-    grid-template-columns: 380px 1fr;
-    gap: 48px;
-    align-items: flex-start;
-  }
-  .bioshop-images-col {
-    width: 380px !important;
-    min-width: 220px !important;
-    max-width: 400px !important;
-    gap: 32px !important;
-  }
-  .bioshop-graphic-alt {
-    max-width: 320px !important;
-    min-width: 180px !important;
-    width: 100% !important;
-    margin-bottom: 32px !important;
-    padding: 16px 8px !important;
-  }
-  .bioshop-graphic-alt img {
-    max-width: 220px !important;
-    width: 100% !important;
-    margin: 0 auto 12px auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-  .bioshop-desc-col {
-    min-width: 280px !important;
-    max-width: 600px !important;
-    width: 100% !important;
-    margin-top: 0 !important;
-  }
-}
-/* BIOSHOP grid SOLO para BIOSHOP, no afecta otras secciones */
-@media (min-width: 811px) {
-  .bioshop-grid {
-    display: grid !important;
-    grid-template-columns: 380px 1fr;
-    gap: 48px;
-    align-items: flex-start;
-  }
-  .bioshop-images-col {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 32px !important;
-    width: 380px !important;
-    min-width: 220px !important;
-    max-width: 400px !important;
-    margin-bottom: 0 !important;
-  }
-  .bioshop-desc-col {
-    min-width: 280px !important;
-    max-width: 600px !important;
-    width: 100% !important;
-    margin-top: 0 !important;
-  }
-  .bioshop-graphic-alt {
-    min-width: 180px !important;
-    max-width: 320px !important;
-    width: 100% !important;
-    margin-bottom: 32px !important;
-    padding: 16px 8px !important;
-  }
-  .bioshop-graphic-alt img {
-    max-width: 220px !important;
-    width: 100% !important;
-    margin: 0 auto 12px auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
 body {
   margin: 0;
   padding-left: 24px;
@@ -1492,19 +1322,6 @@ body {
 }
 #scrollTopBtn:hover {
   background: linear-gradient(135deg,#00B2FF,#FF5E00);
-}
-.service-card div[style*="background:linear-gradient"] {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.bioshop-graphics-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-  align-items: center;
-  margin: 32px 0;
 }
 .bioshop-graphic-alt {
   display: flex;
@@ -1674,4 +1491,171 @@ body {
     max-width: 600px !important;
     width: 100% !important;
   }
+}
+.top-bar {
+    background: rgba(10,10,10,0.85);
+    color: #fff;
+    padding: 8px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+.logo-gradient-start {
+    stop-color: #FF5E00;
+    stop-opacity: 1;
+}
+.logo-gradient-end {
+    stop-color: #00B2FF;
+    stop-opacity: 1;
+}
+.about-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+.about-text-column {
+    flex: 1 1 350px;
+    min-width: 280px;
+}
+.why-us-list {
+    color: #f3f3f3;
+}
+.about-visual-column {
+    flex: 1 1 350px;
+    min-width: 280px;
+    gap: 24px;
+    justify-content: center;
+}
+.about-image {
+    border-radius: 10px;
+    max-width: 100%;
+}
+.feature-graphic {
+    margin: 32px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.feature-icon {
+    font-size: 64px;
+    color: #00B2FF;
+    margin-bottom: 8px;
+}
+.bioshop-info-section {
+    margin: 64px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.bioshop-section-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 18px;
+}
+.bioshop-container {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.bioshop-images-column {
+    flex: 1 1 320px;
+    min-width: 220px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.bioshop-description-column {
+    flex: 1 1 350px;
+    min-width: 280px;
+    max-width: 600px;
+}
+.info-card {
+    background: linear-gradient(135deg,rgba(255,94,0,0.85),rgba(0,178,255,0.85));
+    color: #f3f3f3;
+    padding: 24px 18px 18px 18px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin-bottom: 18px;
+}
+.info-card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.info-card-text {
+    font-size: 1.1em;
+    display: block;
+    margin: 12px 0 8px 0;
+}
+.info-card-list {
+    text-align: left;
+    margin: 0 0 12px 0;
+    padding-left: 18px;
+}
+.info-card-footer {
+    margin-top: 8px;
+    font-size: 1em;
+    opacity: 0.95;
+}
+.demo-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+}
+.demo-button {
+    font-size: 1.1em;
+    padding: 12px 32px;
+    border-radius: 8px;
+}
+.contact-intro {
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1.1em;
+    color: #222;
+    text-align: center;
+}
+.contact-intro-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.contact-intro-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin: 12px 0;
+}
+.contact-intro-text {
+    font-size: 1em;
+    opacity: 0.95;
+}
+.map-iframe {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+}
+.scroll-top-icon-container {
+    display: inline-block;
+}
+.play-store-button {
+    font-size: 0.9em;
+    padding: 10px 25px;
 }

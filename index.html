@@ -37,7 +37,7 @@
 
     <!-- Animated Shapes -->
     <div class="shapes-container">
-            <div style="background:rgba(10,10,10,0.85);color:#fff;padding:8px 32px;display:flex;justify-content:space-between;align-items:center;font-size:15px;">
+            <div class="top-bar">
             </div>
     </div>
 
@@ -51,8 +51,8 @@
             <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#00B2FF;stop-opacity:1" />
+                        <stop offset="0%" class="logo-gradient-start" />
+                        <stop offset="100%" class="logo-gradient-end" />
                     </linearGradient>
                 </defs>
                 <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
@@ -103,23 +103,23 @@
     <!-- About Section -->
     <section class="about" id="about">
     <h2 class="section-title">¿Quiénes Somos?</h2>
-    <div class="about-content" style="display:flex;flex-wrap:wrap;align-items:center;gap:32px;">
-        <div class="about-text" style="flex:1 1 350px;min-width:280px;">
+    <div class="about-content about-content-container">
+        <div class="about-text about-text-column">
             <h2>Somos una startup de tecnología</h2>
             <p>Nos dedicamos a la innovación y al desarrollo de soluciones integrales en aplicaciones web y sistemas. Ofrecemos una única respuesta para todas tus necesidades tecnológicas, presentes y futuras.</p>
             <p>En cada proyecto formamos equipos profesionales adaptados a los requerimientos de cada cliente, siempre supervisados por coordinadores ejecutivos. Desarrollamos las aplicaciones en conjunto con el cliente, logrando una transición natural hacia nuevas formas de trabajo.</p>
             <!-- ¿Por qué elegirnos? -->
             <div>
               <h2>¿Por qué elegirnos?</h2>
-              <ul style="color:#f3f3f3;">
+              <ul class="why-us-list">
                 <li><strong>Somos Creativos:</strong> Combinamos lo mejor de nuestras habilidades e ideas para crear soluciones de calidad orientadas en el usuario.</li>
                 <li><strong>Somos Profesionales:</strong> Nuestro plantel está compuesto por distintos profesionales, que aman lo que hacen.</li>
                 <li><strong>Somos un Equipo:</strong> Nuestro equipo siempre se encuentra actualizándose y aplicando conceptos de las últimas tendencias en diseño y desarrollo.</li>
               </ul>
             </div>
         </div>
-        <div class="about-visual" style="flex:1 1 350px;min-width:280px;gap:24px;justify-content:center;">
-            <img src="images/about.jpg" alt="Sobre BIO" class="tm-img-responsive" style="border-radius: 10px; max-width: 100%;">
+        <div class="about-visual about-visual-column">
+            <img src="images/about.jpg" alt="Sobre BIO" class="tm-img-responsive about-image">
         </div>
     </div>
     
@@ -155,40 +155,43 @@
             <div class="content-panel active" id="gestion">
                 <h3>Sistemas de Gestión</h3>
                 <p>Desarrollamos sistemas informáticos de gestión a medida para empresas y comercios. Integramos módulos para ventas, inventario, clientes, proveedores, facturación electrónica y reportes automáticos. Nuestros sistemas permiten controlar sucursales, optimizar procesos y tomar decisiones inteligentes con estadísticas en tiempo real. Adaptamos cada solución a las necesidades específicas de tu negocio, garantizando seguridad, escalabilidad y soporte constante.</p>
-                <div class="about-graphic" style="margin:32px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span class="tab-icon" style="font-size:64px;color:#00B2FF;margin-bottom:8px;">🖥️</span>
+                <div class="about-graphic feature-graphic">
+                    <span class="tab-icon feature-icon">🖥️</span>
                     <div class="hexagon"></div>
                 </div>
             </div>
             <div class="content-panel" id="web">
                 <h3>Páginas Web</h3>
                 <p>Diseñamos y desarrollamos páginas web modernas, seguras y adaptables a cualquier dispositivo. Creamos sitios institucionales, tiendas online, portales y landing pages con diseño profesional, optimización SEO y velocidad de carga. Implementamos paneles de administración, integración con redes sociales y sistemas de pago. Tu web será tu mejor carta de presentación, lista para crecer y destacar en internet.</p>
-                <div class="about-graphic" style="margin:32px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span class="tab-icon" style="font-size:64px;color:#00B2FF;margin-bottom:8px;">🌐</span>
+                <div class="about-graphic feature-graphic">
+                    <span class="tab-icon feature-icon">🌐</span>
                     <div class="hexagon"></div>
                 </div>
             </div>
             <div class="content-panel" id="movil">
                 <h3>Aplicaciones Móviles</h3>
                     <p>Desarrollamos aplicaciones móviles personalizadas para Android y iOS, adaptadas a las necesidades de tu negocio. Integramos funcionalidades como notificaciones push, geolocalización, integración con sistemas web y diseño intuitivo. Potencia tu empresa con apps modernas, seguras y escalables, listas para publicar en las principales tiendas.</p>
-                <div class="about-graphic" style="margin:32px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span class="tab-icon" style="font-size:64px;color:#00B2FF;margin-bottom:8px;">📱</span>
+                    <a href="https://play.google.com/store/apps/dev?id=6375143936309552759" target="_blank" class="cta-button cta-primary play-store-button">
+                        <span>disponible en el Play Store</span>
+                    </a>
+                <div class="about-graphic feature-graphic">
+                    <span class="tab-icon feature-icon">📱</span>
                     <div class="hexagon"></div>
                 </div>
             </div>
             <div class="content-panel" id="soporte">
                 <h3>Soporte Técnico</h3>
                 <p>Brindamos asistencia informática 24/7, mantenimiento preventivo y correctivo, instalación y configuración de equipos, redes y software. Ofrecemos monitoreo remoto, backup automatizado y recuperación de datos. Nuestro equipo responde rápido y de forma personalizada, asegurando que tu negocio nunca se detenga y que tus sistemas funcionen siempre al máximo rendimiento.</p>
-                <div class="about-graphic" style="margin:32px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span class="tab-icon" style="font-size:64px;color:#00B2FF;margin-bottom:8px;">🛠️</span>
+                <div class="about-graphic feature-graphic">
+                    <span class="tab-icon feature-icon">🛠️</span>
                     <div class="hexagon"></div>
                 </div>
             </div>
             <div class="content-panel" id="cctv">
                 <h3>CCTV</h3>
                 <p>Instalamos y configuramos sistemas de videovigilancia de alta calidad para empresas, hogares y comercios. Cámaras IP, monitoreo remoto, grabación inteligente, alertas automáticas y acceso desde cualquier dispositivo. Protege tu patrimonio y accede a tus cámaras en tiempo real, con soporte técnico y mantenimiento garantizado.</p>
-                <div class="about-graphic" style="margin:32px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                    <span class="tab-icon" style="font-size:64px;color:#00B2FF;margin-bottom:8px;">🎥</span>
+                <div class="about-graphic feature-graphic">
+                    <span class="tab-icon feature-icon">🎥</span>
                     <div class="hexagon"></div>
                 </div>
             </div>
@@ -196,10 +199,10 @@
     </div>
 </section>
 
-    <section class="bioshop-info" id="productos" style="margin:64px 0;display:flex;flex-wrap:wrap;align-items:center;gap:32px;padding-left:32px;padding-right:32px;width:100%;box-sizing:border-box;">
-  <h2 class="section-title" style="text-align:center;width:100%;margin-bottom:18px;">PRODUCTOS</h2>
-      <div class="contact-container bioshop-container" style="margin-top:80px;display:flex;flex-wrap:wrap;gap:32px;">
-        <div class="bioshop-images-col" style="flex:1 1 320px;min-width:220px;max-width:400px;display:flex;flex-direction:column;gap:24px;">
+    <section class="bioshop-info" id="productos" class="bioshop-info-section">
+  <h2 class="section-title bioshop-section-title">PRODUCTOS</h2>
+      <div class="contact-container bioshop-container bioshop-container">
+        <div class="bioshop-images-col bioshop-images-column">
           <div class="bioshop-graphic-alt">
             <img src="images/work/1.png" alt="BIOSHOP-1">
             <div class="hexagon"></div>
@@ -209,21 +212,21 @@
             <div class="hexagon"></div>
           </div>
         </div>
-        <div class="bioshop-desc-col" style="flex:1 1 350px;min-width:280px;max-width:600px;">
-            <div style="background:linear-gradient(135deg,rgba(255,94,0,0.85),rgba(0,178,255,0.85));color:#f3f3f3;padding:24px 18px 18px 18px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.10);margin-bottom:18px;">
-              <h2 style="font-size:1.3em;font-weight:700;letter-spacing:1px;margin-bottom:12px;">BIOSHOP: Gestión inteligente para tu negocio</h2>
-              <p style="font-size:1.1em;display:block;margin:12px 0 8px 0;">BIOSHOP es nuestra solución integral para comercios y emprendedores. Con BIOSHOP puedes gestionar ventas, inventario, clientes y facturación electrónica desde cualquier lugar, con reportes automáticos y módulos personalizables.</p>
-              <ul style="text-align:left;margin:0 0 12px 0;padding-left:18px;">
+        <div class="bioshop-desc-col bioshop-description-column">
+            <div class="info-card">
+              <h2 class="info-card-title">BIOSHOP: Gestión inteligente para tu negocio</h2>
+              <p class="info-card-text">BIOSHOP es nuestra solución integral para comercios y emprendedores. Con BIOSHOP puedes gestionar ventas, inventario, clientes y facturación electrónica desde cualquier lugar, con reportes automáticos y módulos personalizables.</p>
+              <ul class="info-card-list">
                   <li>Control total de tu tienda y sucursales</li>
                   <li>Reportes automáticos y estadísticas en tiempo real</li>
                   <li>Facturación electrónica y gestión de clientes</li>
                   <li>Acceso desde web y app móvil</li>
                   <li>Soporte y actualizaciones constantes</li>
               </ul>
-              <p style="margin-top:8px;font-size:1em;opacity:0.95;">Optimiza tu negocio y toma decisiones inteligentes con BIOSHOP. ¡Solicita una demo y descubre cómo transformar tu comercio!</p>
+              <p class="info-card-footer">Optimiza tu negocio y toma decisiones inteligentes con BIOSHOP. ¡Solicita una demo y descubre cómo transformar tu comercio!</p>
             </div>
-  <div style="width:100%;text-align:center;margin-top:32px;">
-    <a href="#contact" class="cta-button cta-primary" style="font-size:1.1em;padding:12px 32px;border-radius:8px;">Solicitar Demo</a>
+  <div class="demo-button-container">
+    <a href="#contact" class="cta-button cta-primary demo-button">Solicitar Demo</a>
   </div>
         </div>
       </div>
@@ -233,12 +236,12 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">Contacto</h2>
-        <div style="max-width:600px;margin:0 auto 24px auto;padding:0;background:none;border-radius:0;box-shadow:none;font-size:1.1em;color:#222;text-align:center;">
-            <div style="background:linear-gradient(135deg,rgba(255,94,0,0.85),rgba(0,178,255,0.85));color:#f3f3f3;padding:24px 18px 18px 18px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.10);margin-bottom:18px;">
-                <span style="font-size:1.3em;font-weight:700;letter-spacing:1px;">En BIO</span><br>
-                <span style="font-size:1.1em;display:block;margin:12px 0 8px 0;">Estamos ansiosos por oírte.<br>¡Esperamos que vengas con proyectos que nos desafíen para crear lo que buscas en tu estrategia digital!</span>
-                <hr style="border:none;border-top:1px solid rgba(255,255,255,0.25);margin:12px 0;">
-                <span style="font-size:1em;opacity:0.95;">Puedes solicitar charlar con nosotros a través de este formulario.<br>Cuida de enviar correctamente tu número de teléfono o email para poder contactarte luego.<br>El tiempo de respuesta es de aproximadamente <strong>1-2 horas</strong>.</span>
+        <div class="contact-intro">
+            <div class="info-card">
+                <span class="contact-intro-title">En BIO</span><br>
+                <span class="info-card-text">Estamos ansiosos por oírte.<br>¡Esperamos que vengas con proyectos que nos desafíen para crear lo que buscas en tu estrategia digital!</span>
+                <hr class="contact-intro-divider">
+                <span class="contact-intro-text">Puedes solicitar charlar con nosotros a través de este formulario.<br>Cuida de enviar correctamente tu número de teléfono o email para poder contactarte luego.<br>El tiempo de respuesta es de aproximadamente <strong>1-2 horas</strong>.</span>
             </div>
         </div>
         <div class="contact-container">
@@ -284,7 +287,7 @@
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.106071851336!2d-57.41960442461258!3d-25.367761277601574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945db27000000001%3A0xee5ef0539cfe3b6d!2sBIO%20Soluciones%20Tecnol%C3%B3gicas!5e0!3m2!1ses-419!2spy!4v1755825993662!5m2!1ses-419!2spy" width="100%" height="220" style="border:0;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.15);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.106071851336!2d-57.41960442461258!3d-25.367761277601574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945db27000000001%3A0xee5ef0539cfe3b6d!2sBIO%20Soluciones%20Tecnol%C3%B3gicas!5e0!3m2!1ses-419!2spy!4v1755825993662!5m2!1ses-419!2spy" width="100%" height="220" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -294,14 +297,14 @@
     <footer>
     <div class="footer-content">
         <p class="copyright">
-        © 2025 <a href="#home" style="color: inherit; text-decoration: none;">BIO Soluciones Tecnológicas</a>. 
+        © 2025 <a href="#home" class="footer-link">BIO Soluciones Tecnológicas</a>. 
         Todos los derechos reservados. Desarrollado por 
-        <a href="#home" style="color: inherit; text-decoration: none;">BIO Soluciones Tecnológicas</a>.
+        <a href="#home" class="footer-link">BIO Soluciones Tecnológicas</a>.
         </p>    
     </div>
 </footer>
 
-<button id="scrollTopBtn" title="Ir arriba"><span style="display:inline-block;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 6L7 13M14 6L21 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22V6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+<button id="scrollTopBtn" title="Ir arriba"><span class="scroll-top-icon-container"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 6L7 13M14 6L21 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22V6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
