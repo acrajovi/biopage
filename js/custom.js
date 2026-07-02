@@ -1,9 +1,27 @@
-// BIO Soluciones Tecnológicas - Custom JavaScript
+// Safe localStorage wrapper for file:// protocol support
+const safeStorage = {
+  getItem(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      // Ignore
+    }
+  }
+};
 
 document.addEventListener('DOMContentLoaded', function() {
   
   // ===== TYPEWRITER EFFECT =====
-  const textToType = 'tecnología';
+  const savedLang = safeStorage.getItem('lang') || 'es';
+  const typeWords = { es: 'tecnología', en: 'technology', pt: 'tecnologia' };
+  let textToType = typeWords[savedLang] || typeWords['es'];
   const typewriterEl = document.getElementById('typewriter');
   let charIndex = 0;
   
@@ -137,35 +155,62 @@ document.addEventListener('DOMContentLoaded', function() {
   
   initAOS();
   
-  // ===== PARALLAX EFFECT =====
+  // ===== UNIFIED SCROLL SYSTEM (PASSIVE & GPU ACCELERATED) =====
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const floatingActions = document.querySelector('.floating-actions');
+  const header = document.querySelector('.header');
   const parallaxElements = document.querySelectorAll('[data-parallax]');
+  const shapes = document.querySelectorAll('.shape');
   
-  function updateParallax() {
-    const scrolled = window.scrollY;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  
+  function handleScroll() {
+    // 1. Header shrink on scroll
+    if (header) {
+      if (lastScrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
     
+    // 2. Scroll to top button visibility (threshold: 80px for early mobile display)
+    const threshold = 80;
+    if (lastScrollY > threshold) {
+      if (scrollTopBtn) scrollTopBtn.classList.add('visible');
+      if (floatingActions) floatingActions.classList.add('shift-up');
+    } else {
+      if (scrollTopBtn) scrollTopBtn.classList.remove('visible');
+      if (floatingActions) floatingActions.classList.remove('shift-up');
+    }
+    
+    // 3. Parallax elements (GPU hardware-accelerated via translate3d)
     parallaxElements.forEach(el => {
       const speed = parseFloat(el.getAttribute('data-parallax')) || 0.1;
-      const yPos = scrolled * speed;
-      el.style.transform = `translateY(${yPos}px)`;
+      const yPos = lastScrollY * speed;
+      el.style.transform = `translate3d(0, ${yPos}px, 0)`;
     });
+    
+    // 4. Parallax floating shapes (GPU hardware-accelerated)
+    shapes.forEach((shape, index) => {
+      const speed = 0.05 + (index * 0.02);
+      shape.style.transform = `translate3d(0, ${lastScrollY * speed}px, 0)`;
+    });
+    
+    ticking = false;
   }
   
   window.addEventListener('scroll', function() {
-    requestAnimationFrame(updateParallax);
-  });
+    lastScrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    if (!ticking) {
+      window.requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
+  }, { passive: true });
   
-  // Also add parallax to floating shapes
-  const shapes = document.querySelectorAll('.shape');
-  window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    shapes.forEach((shape, index) => {
-      const speed = 0.05 + (index * 0.02);
-      shape.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-  });
-  
-  // Initialize parallax positions
-  updateParallax();
+  // Initialize on load
+  handleScroll();
   
   // ===== FORM HANDLING (FORMSUBMIT) =====
   const form = document.getElementById('contactForm');
@@ -231,29 +276,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Close mobile menu when clicking a link
-  document.querySelectorAll('.nav-link').forEach(link => {
+  document.querySelectorAll('#navLinks a').forEach(link => {
     link.addEventListener('click', function() {
+      // Don't close menu if it's a dropdown toggle
+      if (this.hasAttribute('data-dropdown-button')) {
+        return;
+      }
+      
       if (window.innerWidth <= 768) {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
+        if (navLinks) navLinks.classList.remove('active');
       }
     });
   });
   
-  // ===== SCROLL TO TOP BUTTON =====
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
-  
+  // ===== SCROLL TO TOP CLICK =====
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
     });
   }
   
@@ -262,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const htmlElement = document.documentElement;
   
   // Check for saved preference
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = safeStorage.getItem('theme');
   if (savedTheme) {
     htmlElement.setAttribute('data-theme', savedTheme);
     updateDarkModeIcon(savedTheme);
@@ -277,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
       htmlElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      safeStorage.setItem('theme', newTheme);
       updateDarkModeIcon(newTheme);
     });
   }
@@ -305,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const headerHeight = document.querySelector('.header').offsetHeight;
           const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
           
-          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          window.scrollTo(0, targetPosition);
         }
       }
     });
@@ -315,10 +355,12 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       const dropdown = document.getElementById('appsDropdown');
+      const langDropdown = document.getElementById('langDropdown');
       const menuToggle = document.getElementById('menuToggle');
       const navLinks = document.getElementById('navLinks');
       
       if (dropdown) dropdown.classList.remove('active');
+      if (langDropdown) langDropdown.classList.remove('active');
       if (menuToggle) menuToggle.classList.remove('active');
       if (navLinks) navLinks.classList.remove('active');
     }
@@ -397,13 +439,72 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ===== HEADER SHRINK ON SCROLL =====
-  const header = document.querySelector('.header');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+  // (Header shrink is handled in the unified scroll handler)
+
+  // ===== INTERNATIONALIZATION (i18n) =====
+  function setLanguage(lang) {
+    if (typeof translations === 'undefined' || !translations[lang]) return;
+    
+    // Update texts
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    // Update typewriter word instantly
+    textToType = typeWords[lang] || typeWords['es'];
+    if (typewriterEl && charIndex >= textToType.length) {
+      typewriterEl.textContent = textToType;
+    } else if (typewriterEl) {
+       // if still typing, we let it finish or reset, but usually it's finished by the time user switches
+       typewriterEl.textContent = textToType;
+       charIndex = textToType.length; 
+    }
+
+    // Update current lang display in navbar
+    const currentLangDisplay = document.getElementById('currentLangDisplay');
+    if (currentLangDisplay) {
+      const flags = { es: '🇵🇾', en: '🇺🇸', pt: '🇧🇷' };
+      const flag = flags[lang] || '🇵🇾';
+      currentLangDisplay.textContent = `${flag} ${lang.toUpperCase()}`;
+    }
+    
+    // Save preference
+    safeStorage.setItem('lang', lang);
+  }
+
+  // Language Dropdown Setup
+  const langDropdown = document.getElementById('langDropdown');
+  if (langDropdown) {
+    const langButton = langDropdown.querySelector('[data-dropdown-button]');
+    if (langButton) {
+      langButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+      });
+    }
+    
+    document.querySelectorAll('.lang-select').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const selectedLang = this.getAttribute('data-lang');
+        setLanguage(selectedLang);
+        langDropdown.classList.remove('active');
+      });
+    });
+  }
+
+  // Close lang dropdown on outside click
+  document.addEventListener('click', function(e) {
+    if (langDropdown && !langDropdown.contains(e.target)) {
+      langDropdown.classList.remove('active');
     }
   });
+
+  // Initialize Language on Load
+  setLanguage(savedLang);
+
 });
