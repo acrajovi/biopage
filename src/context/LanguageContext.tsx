@@ -17,7 +17,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       if (saved === 'es' || saved === 'en' || saved === 'pt') {
         return saved;
       }
-    } catch (e) {
+    } catch {
       // safe fallback if localStorage fails or is disabled (like under Safari file:// rules)
     }
     return 'es';
@@ -27,7 +27,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguageState(lang);
     try {
       localStorage.setItem('lang', lang);
-    } catch (e) {
+    } catch {
       // safe fallback
     }
   };

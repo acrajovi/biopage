@@ -24,7 +24,7 @@ export const Portfolio: React.FC = () => {
       image: '/images/work/3.jpg',
       badge: 'port_web_badge',
       desc: 'port_p2_desc',
-      tech: ['API REST', 'JavaScript', 'Buscador RUC'],
+      tech: ['PWA', 'API REST', 'JavaScript'],
       link: 'https://datosruc.bio.com.py/',
       external: true
     },
@@ -35,7 +35,7 @@ export const Portfolio: React.FC = () => {
       image: '/images/work/2.png',
       badge: 'port_web_badge',
       desc: 'port_p3_desc',
-      tech: ['Flutter', 'Android & iOS', 'Climatización'],
+      tech: ['PWA', 'Web App', 'Climatización'],
       link: 'https://calcularbtu.bio.com.py/',
       external: true
     }

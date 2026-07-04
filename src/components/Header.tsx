@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
       const saved = localStorage.getItem('theme');
       if (saved === 'dark' || saved === 'light') return saved;
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    } catch (e) {
+    } catch {
       return 'light';
     }
   });
@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     }
     try {
       localStorage.setItem('theme', theme);
-    } catch (e) {}
+    } catch {}
   }, [theme]);
 
   // Click outside to close dropdowns
