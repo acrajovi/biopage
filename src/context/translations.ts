@@ -118,6 +118,37 @@ export interface TranslationDict {
   footer_rights: string;
   float_call: string;
   float_wa: string;
+  legal_privacy_title: string;
+  legal_privacy_p1: string;
+  legal_privacy_h2_1: string;
+  legal_privacy_p2: string;
+  legal_privacy_p3: string;
+  legal_privacy_li1: string;
+  legal_privacy_li2: string;
+  legal_privacy_li3: string;
+  legal_privacy_h2_2: string;
+  legal_privacy_p4: string;
+  legal_privacy_h2_3: string;
+  legal_privacy_p5: string;
+  legal_privacy_h2_4: string;
+  legal_privacy_p6: string;
+  legal_terms_title: string;
+  legal_terms_p1: string;
+  legal_terms_p2: string;
+  legal_terms_p3: string;
+  legal_terms_h2_1: string;
+  legal_terms_p4: string;
+  legal_terms_p5: string;
+  legal_terms_h2_2: string;
+  legal_terms_p6: string;
+  legal_terms_li1: string;
+  legal_terms_li2: string;
+  legal_terms_li3: string;
+  legal_terms_li4: string;
+  legal_terms_h2_3: string;
+  legal_terms_p7: string;
+  legal_terms_h2_4: string;
+  legal_terms_p8: string;
 }
 
 export type SupportedLanguages = 'es' | 'en' | 'pt';
@@ -242,7 +273,38 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     footer_services: "Servicios",
     footer_rights: "BIO Soluciones Tecnológicas. Todos los derechos reservados.",
     float_call: "Llámanos",
-    float_wa: "WhatsApp"
+    float_wa: "WhatsApp",
+    legal_privacy_title: "Política de Privacidad",
+    legal_privacy_p1: "En BIO Soluciones Tecnológicas (accesible desde bio.com.py), una de nuestras principales prioridades es la privacidad de nuestros visitantes. Este documento de Política de Privacidad contiene los tipos de información que son recogidos y registrados por BIO Soluciones Tecnológicas y cómo los utilizamos.",
+    legal_privacy_h2_1: "Uso de Cookies y Proveedores de Terceros (Google AdSense)",
+    legal_privacy_p2: "Utilizamos proveedores externos, incluido Google, para publicar anuncios en nuestro sitio web. Google, como proveedor asociado, utiliza cookies (conocidas como cookies de DART) para publicar anuncios basados en las visitas anteriores de los usuarios a nuestro sitio web u otros sitios en Internet.",
+    legal_privacy_p3: "Los usuarios pueden optar por inhabilitar el uso de las cookies de DART visitando la política de privacidad de la red de anuncios y contenido de Google en la siguiente URL:",
+    legal_privacy_li1: "Los proveedores de terceros, incluido Google, utilizan cookies para publicar anuncios basándose en las visitas anteriores de un usuario a su sitio web o a otros sitios web.",
+    legal_privacy_li2: "El uso de cookies de publicidad permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan a sus sitios y/o a otros sitios de Internet.",
+    legal_privacy_li3: "Los usuarios pueden inhabilitar la publicidad personalizada. Para ello, deberán acceder a",
+    legal_privacy_h2_2: "Archivos de Registro (Log Files)",
+    legal_privacy_p4: "BIO Soluciones Tecnológicas sigue un procedimiento estándar de uso de archivos de registro. Estos archivos registran a los visitantes cuando visitan sitios web. La información recopilada incluye direcciones de protocolo de Internet (IP), tipo de navegador, proveedor de servicios de Internet (ISP), fecha y hora, páginas de referencia/salida y posiblemente el número de clics. Estos no están vinculados a ninguna información que sea personalmente identificable.",
+    legal_privacy_h2_3: "Consentimiento",
+    legal_privacy_p5: "Al utilizar nuestro sitio web, usted acepta por la presente nuestra Política de Privacidad y está de acuerdo con sus Términos y Condiciones.",
+    legal_privacy_h2_4: "Contacto",
+    legal_privacy_p6: "Si tiene preguntas adicionales o requiere más información sobre nuestra Política de Privacidad, no dude en contactarnos a través de jacosta@bio.com.py.",
+    legal_terms_title: "Términos y Condiciones",
+    legal_terms_p1: "¡Bienvenido a BIO Soluciones Tecnológicas!",
+    legal_terms_p2: "Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de BIO Soluciones Tecnológicas, ubicado en bio.com.py.",
+    legal_terms_p3: "Al acceder a este sitio web, asumimos que acepta estos términos y condiciones. No continúe utilizando BIO Soluciones Tecnológicas si no está de acuerdo en aceptar todos los términos y condiciones indicados en esta página.",
+    legal_terms_h2_1: "Cookies",
+    legal_terms_p4: "Empleamos el uso de cookies. Al acceder a BIO Soluciones Tecnológicas, usted aceptó utilizar cookies de acuerdo con la Política de Privacidad de BIO Soluciones Tecnológicas.",
+    legal_terms_p5: "La mayoría de los sitios web interactivos utilizan cookies para permitirnos recuperar los detalles del usuario en cada visita. Las cookies son utilizadas por nuestro sitio web para habilitar la funcionalidad de ciertas áreas y hacer que sea más fácil para las personas que lo visitan. Algunos de nuestros socios afiliados/publicitarios (como Google AdSense) también pueden usar cookies.",
+    legal_terms_h2_2: "Licencia",
+    legal_terms_p6: "A menos que se indique lo contrario, BIO Soluciones Tecnológicas y/o sus licenciantes poseen los derechos de propiedad intelectual de todo el material en BIO Soluciones Tecnológicas. Todos los derechos de propiedad intelectual están reservados. Puede acceder a esto desde BIO Soluciones Tecnológicas para su uso personal sujeto a las restricciones establecidas en estos términos y condiciones.",
+    legal_terms_li1: "No debe republicar material de BIO Soluciones Tecnológicas",
+    legal_terms_li2: "No debe vender, alquilar o sublicenciar material de BIO Soluciones Tecnológicas",
+    legal_terms_li3: "No debe reproducir, duplicar o copiar material de BIO Soluciones Tecnológicas",
+    legal_terms_li4: "No debe redistribuir el contenido de BIO Soluciones Tecnológicas",
+    legal_terms_h2_3: "Responsabilidad del Contenido",
+    legal_terms_p7: "No seremos responsables de ningún contenido que aparezca en su sitio web o en sitios enlazados. Usted acepta protegernos y defendernos contra todas las reclamaciones que se presenten en su sitio web.",
+    legal_terms_h2_4: "Reserva de Derechos",
+    legal_terms_p8: "Nos reservamos el derecho de solicitar que elimine todos los enlaces o cualquier enlace en particular a nuestro sitio web. Usted aprueba eliminar de inmediato todos los enlaces a nuestro sitio web cuando se lo solicitemos. También nos reservamos el derecho de modificar estos términos y condiciones y su política de enlaces en cualquier momento."
   },
   en: {
     nav_home: "Home",
@@ -363,7 +425,38 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     footer_services: "Services",
     footer_rights: "BIO Soluciones Tecnológicas. All rights reserved.",
     float_call: "Call us",
-    float_wa: "WhatsApp"
+    float_wa: "WhatsApp",
+    legal_privacy_title: "Privacy Policy",
+    legal_privacy_p1: "At BIO Soluciones Tecnológicas (accessible from bio.com.py), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by BIO Soluciones Tecnológicas and how we use it.",
+    legal_privacy_h2_1: "Use of Cookies and Third-Party Providers (Google AdSense)",
+    legal_privacy_p2: "We use third-party providers, including Google, to serve ads on our website. Google, as a third-party vendor, uses cookies (known as DART cookies) to serve ads based on users' prior visits to our website or other websites on the Internet.",
+    legal_privacy_p3: "Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL:",
+    legal_privacy_li1: "Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.",
+    legal_privacy_li2: "Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.",
+    legal_privacy_li3: "Users may opt out of personalized advertising by visiting",
+    legal_privacy_h2_2: "Log Files",
+    legal_privacy_p4: "BIO Soluciones Tecnológicas follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable.",
+    legal_privacy_h2_3: "Consent",
+    legal_privacy_p5: "By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.",
+    legal_privacy_h2_4: "Contact",
+    legal_privacy_p6: "If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at jacosta@bio.com.py.",
+    legal_terms_title: "Terms and Conditions",
+    legal_terms_p1: "Welcome to BIO Soluciones Tecnológicas!",
+    legal_terms_p2: "These terms and conditions outline the rules and regulations for the use of BIO Soluciones Tecnológicas's Website, located at bio.com.py.",
+    legal_terms_p3: "By accessing this website we assume you accept these terms and conditions. Do not continue to use BIO Soluciones Tecnológicas if you do not agree to take all of the terms and conditions stated on this page.",
+    legal_terms_h2_1: "Cookies",
+    legal_terms_p4: "We employ the use of cookies. By accessing BIO Soluciones Tecnológicas, you agreed to use cookies in agreement with the BIO Soluciones Tecnológicas's Privacy Policy.",
+    legal_terms_p5: "Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners (like Google AdSense) may also use cookies.",
+    legal_terms_h2_2: "License",
+    legal_terms_p6: "Unless otherwise stated, BIO Soluciones Tecnológicas and/or its licensors own the intellectual property rights for all material on BIO Soluciones Tecnológicas. All intellectual property rights are reserved. You may access this from BIO Soluciones Tecnológicas for your own personal use subjected to restrictions set in these terms and conditions.",
+    legal_terms_li1: "You must not republish material from BIO Soluciones Tecnológicas",
+    legal_terms_li2: "You must not sell, rent or sub-license material from BIO Soluciones Tecnológicas",
+    legal_terms_li3: "You must not reproduce, duplicate or copy material from BIO Soluciones Tecnológicas",
+    legal_terms_li4: "You must not redistribute content from BIO Soluciones Tecnológicas",
+    legal_terms_h2_3: "Content Liability",
+    legal_terms_p7: "We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website.",
+    legal_terms_h2_4: "Reservation of Rights",
+    legal_terms_p8: "We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time."
   },
   pt: {
     nav_home: "Início",
@@ -484,6 +577,37 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     footer_services: "Serviços",
     footer_rights: "BIO Soluções Tecnológicas. Todos os direitos reservados.",
     float_call: "Ligue para nós",
-    float_wa: "WhatsApp"
+    float_wa: "WhatsApp",
+    legal_privacy_title: "Política de Privacidade",
+    legal_privacy_p1: "Na BIO Soluciones Tecnológicas (acessível por bio.com.py), uma das nossas principais prioridades é a privacidade dos nossos visitantes. Este documento de Política de Privacidade contém os tipos de informações coletadas e registradas pela BIO Soluciones Tecnológicas e como as utilizamos.",
+    legal_privacy_h2_1: "Uso de Cookies e Provedores de Terceiros (Google AdSense)",
+    legal_privacy_p2: "Utilizamos provedores terceirizados, incluindo o Google, para veicular anúncios em nosso site. O Google, como fornecedor terceirizado, usa cookies (conhecidos como cookies DART) para veicular anúncios com base em visitas anteriores dos usuários ao nosso site ou a outros sites na Internet.",
+    legal_privacy_p3: "Os usuários podem optar por não usar o cookie DART visitando a política de privacidade da rede de conteúdo e anúncios do Google no seguinte URL:",
+    legal_privacy_li1: "Fornecedores terceirizados, incluindo o Google, usam cookies para veicular anúncios com base nas visitas anteriores de um usuário ao seu site ou a outros sites.",
+    legal_privacy_li2: "O uso de cookies de publicidade pelo Google permite que ele e seus parceiros veiculem anúncios para seus usuários com base em visitas aos seus sites e/ou outros sites na Internet.",
+    legal_privacy_li3: "Os usuários podem desativar a publicidade personalizada acessando o",
+    legal_privacy_h2_2: "Arquivos de Log (Log Files)",
+    legal_privacy_p4: "A BIO Soluciones Tecnológicas segue um procedimento padrão de uso de arquivos de log. Esses arquivos registram os visitantes quando eles visitam sites. As informações coletadas incluem endereços de protocolo da Internet (IP), tipo de navegador, provedor de serviços de Internet (ISP), carimbo de data e hora, páginas de referência/saída e possivelmente o número de cliques. Eles não estão vinculados a nenhuma informação que seja pessoalmente identificável.",
+    legal_privacy_h2_3: "Consentimento",
+    legal_privacy_p5: "Ao usar nosso site, você concorda com nossa Política de Privacidade e com seus Termos e Condições.",
+    legal_privacy_h2_4: "Contato",
+    legal_privacy_p6: "Se você tiver dúvidas adicionais ou precisar de mais informações sobre nossa Política de Privacidade, não hesite em nos contatar pelo e-mail jacosta@bio.com.py.",
+    legal_terms_title: "Termos e Condições",
+    legal_terms_p1: "Bem-vindo à BIO Soluciones Tecnológicas!",
+    legal_terms_p2: "Estes termos e condições descrevem as regras e regulamentos para o uso do Site da BIO Soluciones Tecnológicas, localizado em bio.com.py.",
+    legal_terms_p3: "Ao acessar este site, presumimos que você aceita estes termos e condições. Não continue a usar a BIO Soluciones Tecnológicas se não concordar em aceitar todos os termos e condições indicados nesta página.",
+    legal_terms_h2_1: "Cookies",
+    legal_terms_p4: "Nós utilizamos cookies. Ao acessar a BIO Soluciones Tecnológicas, você concordou em usar cookies de acordo com a Política de Privacidade da BIO Soluciones Tecnológicas.",
+    legal_terms_p5: "A maioria dos sites interativos usa cookies para nos permitir recuperar os detalhes do usuário a cada visita. Os cookies são usados pelo nosso site para permitir a funcionalidade de certas áreas e facilitar a vida das pessoas que o visitam. Alguns de nossos afiliados/parceiros de publicidade (como o Google AdSense) também podem usar cookies.",
+    legal_terms_h2_2: "Licença",
+    legal_terms_p6: "A menos que indicado de outra forma, a BIO Soluciones Tecnológicas e/ou seus licenciadores possuem os direitos de propriedade intelectual de todo o material na BIO Soluciones Tecnológicas. Todos os direitos de propriedade intelectual são reservados. Você pode acessar isso da BIO Soluciones Tecnológicas para seu uso pessoal, sujeito às restrições definidas nestes termos e condições.",
+    legal_terms_li1: "Você não deve republicar material da BIO Soluciones Tecnológicas",
+    legal_terms_li2: "Você não deve vender, alugar ou sublicenciar material da BIO Soluciones Tecnológicas",
+    legal_terms_li3: "Você não deve reproduzir, duplicar ou copiar material da BIO Soluciones Tecnológicas",
+    legal_terms_li4: "Você não deve redistribuir conteúdo da BIO Soluciones Tecnológicas",
+    legal_terms_h2_3: "Responsabilidade pelo Conteúdo",
+    legal_terms_p7: "Não seremos responsáveis por nenhum conteúdo que apareça em seu Site. Você concorda em nos proteger e nos defender contra todas as reivindicações que surgirem em seu Site.",
+    legal_terms_h2_4: "Reserva de Direitos",
+    legal_terms_p8: "Reservamo-nos o direito de solicitar que você remova todos os links ou qualquer link específico para o nosso Site. Você aprova a remoção imediata de todos os links para nosso Site, mediante solicitação. Também nos reservamos o direito de alterar estes termos e condições e sua política de links a qualquer momento."
   }
 };

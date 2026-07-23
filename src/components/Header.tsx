@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguages } from '../context/translations';
 
@@ -12,6 +13,9 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const [appsDropdownOpen, setAppsDropdownOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     try {
       const saved = localStorage.getItem('theme');
@@ -62,16 +66,21 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    const element = document.getElementById(targetId);
-    if (element) {
-      const header = document.querySelector('.header') as HTMLElement;
-      const headerHeight = header ? header.offsetHeight : 70;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+    
+    if (location.pathname !== '/') {
+      navigate(`/#${targetId}`);
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        const header = document.querySelector('.header') as HTMLElement;
+        const headerHeight = header ? header.offsetHeight : 70;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
