@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Respetar archivos y directorios reales (ads.txt, robots.txt, sitemap.xml, assets, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Redirigir el resto de solicitudes a index.html (SPA)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Forzar tipo MIME correcto para ads.txt y robots.txt
+<Files "ads.txt">
+  Header set Content-Type "text/plain; charset=utf-8"
+</Files>
+<Files "robots.txt">
+  Header set Content-Type "text/plain; charset=utf-8"
+</Files>
+
+# Compresión GZIP para mejorar velocidad de carga y Core Web Vitals
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
