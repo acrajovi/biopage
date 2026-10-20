@@ -8,14 +8,25 @@ export const Portfolio: React.FC = () => {
   const projects = [
     {
       id: 'bioshop',
-      title: 'BIOSHOP',
+      title: 'BIOSHOP ERP',
       category: 'system',
       image: '/images/work/1.png',
       badge: 'port_sys_badge',
       desc: 'port_p1_desc',
-      tech: ['Web App', 'PostgreSQL', 'Facturación Electrónica'],
+      tech: ['SaaS', 'ERP & SIFEN', 'Plan Mensual'],
       link: '#products',
       external: false
+    },
+    {
+      id: 'bioshop-catalog',
+      title: 'BIOSHOP Catálogo',
+      category: 'web',
+      image: '/images/work/bioshop-catalog.png',
+      badge: 'port_web_badge',
+      desc: 'port_p4_desc',
+      tech: ['E-Commerce', 'Tienda Virtual', 'SaaS Sync'],
+      link: 'https://bioshop-demo.bio.com.py/catalog',
+      external: true
     },
     {
       id: 'ruc',
@@ -44,6 +55,16 @@ export const Portfolio: React.FC = () => {
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(p => p.category === activeFilter);
+
+  const getProjectLinkKey = (id: string): 'port_p1_link' | 'port_p2_link' | 'port_p3_link' | 'port_p4_link' => {
+    switch (id) {
+      case 'bioshop': return 'port_p1_link';
+      case 'bioshop-catalog': return 'port_p4_link';
+      case 'ruc': return 'port_p2_link';
+      case 'btu': return 'port_p3_link';
+      default: return 'port_p1_link';
+    }
+  };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string, external: boolean) => {
     if (!external) {
@@ -111,8 +132,8 @@ export const Portfolio: React.FC = () => {
           </button>
         </div>
 
-        {/* Grid */}
-        <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid: 4 columns in desktop, responsive in tablets and mobile */}
+        <div className="portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProjects.map((project) => (
             <div 
               key={project.id}
@@ -124,22 +145,22 @@ export const Portfolio: React.FC = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="project-overlay absolute inset-0 bg-linear-to-t from-gray-950/80 via-gray-950/20 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-6 transition-opacity duration-300">
-                  <span className="project-tag-badge bg-primary text-white text-xs font-bold py-1 px-3 rounded-full uppercase tracking-wider">
+                <div className="project-overlay absolute inset-0 bg-linear-to-t from-gray-950/80 via-gray-950/20 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-4 transition-opacity duration-300">
+                  <span className="project-tag-badge bg-primary text-white text-[11px] font-bold py-1 px-2.5 rounded-full uppercase tracking-wider">
                     {t(project.badge as any)}
                   </span>
                 </div>
               </div>
-              <div className="project-info p-6 flex-grow flex flex-col">
-                <h3 className="text-xl font-bold text-dark dark:text-white mb-2">{project.title}</h3>
-                <p className="text-sm text-gray/80 dark:text-gray/90 leading-relaxed mb-5 flex-grow">
+              <div className="project-info p-5 flex-grow flex flex-col">
+                <h3 className="text-lg font-bold text-dark dark:text-white mb-2">{project.title}</h3>
+                <p className="text-xs md:text-sm text-gray/80 dark:text-gray/90 leading-relaxed mb-4 flex-grow">
                   {t(project.desc as any)}
                 </p>
-                <div className="project-tech flex flex-wrap gap-2 mb-6">
+                <div className="project-tech flex flex-wrap gap-1.5 mb-5">
                   {project.tech.map((tech, index) => (
                     <span 
                       key={index}
-                      className="text-xs font-semibold text-primary bg-primary/10 py-1 px-2.5 rounded-md"
+                      className="text-[11px] font-semibold text-primary bg-primary/10 py-0.5 px-2 rounded-md"
                     >
                       {tech}
                     </span>
@@ -150,9 +171,9 @@ export const Portfolio: React.FC = () => {
                   target={project.external ? "_blank" : undefined}
                   rel={project.external ? "noreferrer" : undefined}
                   onClick={(e) => handleLinkClick(e, project.link, project.external)}
-                  className="project-link inline-flex items-center gap-2 text-primary font-bold text-sm no-underline hover:text-primary-dark"
+                  className="project-link inline-flex items-center gap-1.5 text-primary font-bold text-xs md:text-sm no-underline hover:text-primary-dark transition-colors"
                 >
-                  <span>{t(project.id === 'bioshop' ? 'port_p1_link' : project.id === 'ruc' ? 'port_p2_link' : 'port_p3_link')}</span>
+                  <span>{t(getProjectLinkKey(project.id))}</span>
                   <i className={`fas ${project.external ? 'fa-external-link-alt' : 'fa-arrow-right'} text-xs`}></i>
                 </a>
               </div>
