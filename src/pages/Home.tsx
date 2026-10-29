@@ -7,6 +7,7 @@ import { Services } from '../components/Services';
 import { Portfolio } from '../components/Portfolio';
 import { TechStack } from '../components/TechStack';
 import { Products } from '../components/Products';
+import { FreeTools } from '../components/FreeTools';
 import { FAQ } from '../components/FAQ';
 import { Contact } from '../components/Contact';
 
@@ -44,6 +45,7 @@ export const Home: React.FC = () => {
       <Portfolio />
       <TechStack />
       <Products />
+      <FreeTools />
       <FAQ />
       <Contact />
     </>

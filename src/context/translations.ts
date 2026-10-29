@@ -158,6 +158,24 @@ export interface TranslationDict {
   legal_terms_p7: string;
   legal_terms_h2_4: string;
   legal_terms_p8: string;
+  nav_tools: string;
+  tools_tag: string;
+  tools_title: string;
+  tools_subtitle: string;
+  tools_badge_free: string;
+  tools_btn_launch: string;
+  tools_ruc_title: string;
+  tools_ruc_subtitle: string;
+  tools_ruc_desc: string;
+  tools_ruc_feat1: string;
+  tools_ruc_feat2: string;
+  tools_ruc_feat3: string;
+  tools_btu_title: string;
+  tools_btu_subtitle: string;
+  tools_btu_desc: string;
+  tools_btu_feat1: string;
+  tools_btu_feat2: string;
+  tools_btu_feat3: string;
 }
 
 export type SupportedLanguages = 'es' | 'en' | 'pt';
@@ -322,7 +340,25 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     legal_terms_h2_3: "Responsabilidad del Contenido",
     legal_terms_p7: "No seremos responsables de ningún contenido que aparezca en su sitio web o en sitios enlazados. Usted acepta protegernos y defendernos contra todas las reclamaciones que se presenten en su sitio web.",
     legal_terms_h2_4: "Reserva de Derechos",
-    legal_terms_p8: "Nos reservamos el derecho de solicitar que elimine todos los enlaces o cualquier enlace en particular a nuestro sitio web. Usted aprueba eliminar de inmediato todos los enlaces a nuestro sitio web cuando se lo solicitemos. También nos reservamos el derecho de modificar estos términos y condiciones y su política de enlaces en cualquier momento."
+    legal_terms_p8: "Nos reservamos el derecho de solicitar que elimine todos los enlaces o cualquier enlace en particular a nuestro sitio web. Usted aprueba eliminar de inmediato todos los enlaces a nuestro sitio web cuando se lo solicitemos. También nos reservamos el derecho de modificar estos términos y condiciones y su política de enlaces en cualquier momento.",
+    nav_tools: "Herramientas",
+    tools_tag: "Utilidades Web Gratuitas",
+    tools_title: "Herramientas de Libre Acceso para tu Negocio y Hogar",
+    tools_subtitle: "Desarrollamos soluciones prácticas, gratuitas y de alto rendimiento que simplifican tareas tributarias y de climatización.",
+    tools_badge_free: "Herramienta 100% Gratuita",
+    tools_btn_launch: "Abrir Herramienta",
+    tools_ruc_title: "Datos RUC Py",
+    tools_ruc_subtitle: "Buscador y Validador de Contribuyentes DNIT",
+    tools_ruc_desc: "Consulta al instante información tributaria pública de personas y empresas en Paraguay: RUC, Razón Social, Dígito Verificador (DV) y estado de contribuyente con datos actualizados.",
+    tools_ruc_feat1: "Búsqueda por Razón Social o número de Cédula/RUC",
+    tools_ruc_feat2: "Cálculo y validación automática de Dígito Verificador",
+    tools_ruc_feat3: "Verificación de estados: Activo, Bloqueado o Suspendido",
+    tools_btu_title: "Calcular BTU",
+    tools_btu_subtitle: "Calculadora Térmica para Aire Acondicionado",
+    tools_btu_desc: "Calcula con precisión técnica la capacidad térmica requerida (BTU/h) para cualquier espacio según metros cuadrados, metros cúbicos, cantidad de personas y fuentes de calor.",
+    tools_btu_feat1: "Cálculo volumétrico y dimensional exacto",
+    tools_btu_feat2: "Recomendaciones de equipos Split, Inverter y Piso Techo",
+    tools_btu_feat3: "Optimización de eficiencia energética y consumo eléctrico"
   },
   en: {
     nav_home: "Home",
@@ -483,7 +519,25 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     legal_terms_h2_3: "Content Liability",
     legal_terms_p7: "We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website.",
     legal_terms_h2_4: "Reservation of Rights",
-    legal_terms_p8: "We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time."
+    legal_terms_p8: "We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time.",
+    nav_tools: "Tools",
+    tools_tag: "Free Web Utilities",
+    tools_title: "Open-Access Tools for Your Business and Home",
+    tools_subtitle: "We build practical, free, high-performance web solutions that simplify tax verification and climate sizing tasks.",
+    tools_badge_free: "100% Free Tool",
+    tools_btn_launch: "Launch Tool",
+    tools_ruc_title: "Datos RUC Py",
+    tools_ruc_subtitle: "Paraguay Taxpayer Search & Validator",
+    tools_ruc_desc: "Instantly check official public tax records in Paraguay: Tax ID (RUC), registered company name, check digit (DV), and taxpayer active/suspended status with updated data.",
+    tools_ruc_feat1: "Search by business name or ID/RUC number",
+    tools_ruc_feat2: "Automatic check digit (DV) computation & validation",
+    tools_ruc_feat3: "Status verification: Active, Blocked, or Suspended",
+    tools_btu_title: "Calcular BTU",
+    tools_btu_subtitle: "Air Conditioner Thermal Sizing Calculator",
+    tools_btu_desc: "Calculate with technical accuracy the cooling capacity needed (BTU/h) for any room based on square meters, volume, occupancy, and thermal exposure.",
+    tools_btu_feat1: "Exact volumetric and dimensional sizing",
+    tools_btu_feat2: "Equipment recommendations for Split and Inverter AC units",
+    tools_btu_feat3: "Energy efficiency and power consumption optimization"
   },
   pt: {
     nav_home: "Início",
@@ -644,6 +698,24 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     legal_terms_h2_3: "Responsabilidade pelo Conteúdo",
     legal_terms_p7: "Não seremos responsáveis por nenhum conteúdo que apareça em seu Site. Você concorda em nos proteger e nos defender contra todas as reivindicações que surgirem em seu Site.",
     legal_terms_h2_4: "Reserva de Direitos",
-    legal_terms_p8: "Reservamo-nos o direito de solicitar que você remova todos os links ou qualquer link específico para o nosso Site. Você aprova a remoção imediata de todos os links para nosso Site, mediante solicitação. Também nos reservamos o direito de alterar estes termos e condições e sua política de links a qualquer momento."
+    legal_terms_p8: "Reservamo-nos o direito de solicitar que você remova todos os links ou qualquer link específico para o nosso Site. Você aprova a remoção imediata de todos os links para nosso Site, mediante solicitação. Também nos reservamos o direito de alterar estes termos e condições e sua política de links a qualquer momento.",
+    nav_tools: "Ferramentas",
+    tools_tag: "Utilitários Web Gratuitos",
+    tools_title: "Ferramentas de Acesso Gratuito para Negócios e Residências",
+    tools_subtitle: "Desenvolvemos soluções práticas, gratuitas e de alto desempenho que simplificam consultas fiscais e dimensionamento térmico.",
+    tools_badge_free: "Ferramenta 100% Gratuita",
+    tools_btn_launch: "Abrir Ferramenta",
+    tools_ruc_title: "Datos RUC Py",
+    tools_ruc_subtitle: "Buscador e Validador de Contribuintes do Paraguai",
+    tools_ruc_desc: "Consulte instantaneamente dados fiscais públicos de empresas e indivíduos no Paraguai: RUC, Razão Social, Dígito Verificador (DV) e situação cadastral com dados atualizados.",
+    tools_ruc_feat1: "Pesquisa por Razão Social ou número de documento/RUC",
+    tools_ruc_feat2: "Cálculo e validação automática do Dígito Verificador",
+    tools_ruc_feat3: "Verificação de status: Ativo, Bloqueado ou Suspenso",
+    tools_btu_title: "Calcular BTU",
+    tools_btu_subtitle: "Calculadora Térmica para Ar-Condicionado",
+    tools_btu_desc: "Calcule com exatidão técnica a capacidade de refrigeração necessária (BTU/h) para qualquer ambiente conforme dimensões, ocupantes e fontes de calor.",
+    tools_btu_feat1: "Dimensionamento volumétrico e dimensional preciso",
+    tools_btu_feat2: "Recomendações de aparelhos Split, Inverter e Piso-Teto",
+    tools_btu_feat3: "Otimização do consumo de energia e eficiência térmica"
   }
 };

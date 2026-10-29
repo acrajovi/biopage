@@ -124,6 +124,7 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
             <li className="w-full md:w-auto"><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_services')}</a></li>
             <li className="w-full md:w-auto"><a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_portfolio')}</a></li>
             <li className="w-full md:w-auto"><a href="#products" onClick={(e) => handleNavClick(e, 'products')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_products')}</a></li>
+            <li className="w-full md:w-auto"><a href="#tools" onClick={(e) => handleNavClick(e, 'tools')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_tools')}</a></li>
             
             {/* Apps Dropdown */}
             <li ref={appsRef} className="dropdown relative w-full md:w-auto">
