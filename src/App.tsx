@@ -28,7 +28,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="app flex flex-col min-h-screen">
+      <div className="app flex flex-col min-h-screen w-full overflow-x-clip">
         <CursorGlow />
 
         {/* Architectural Grid & Radial Mesh Background */}

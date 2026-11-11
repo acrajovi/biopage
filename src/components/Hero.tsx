@@ -137,71 +137,73 @@ export const Hero: React.FC = () => {
 
   return (
     <section
-      className="hero relative min-h-[92vh] flex items-center justify-center pt-28 pb-20 px-6 text-center overflow-hidden"
+      className="hero relative min-h-[88vh] sm:min-h-[92vh] flex items-center justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 text-center overflow-hidden"
       id="home"
     >
       <canvas ref={canvasRef} id="particles" className="absolute inset-0 w-full h-full -z-10 pointer-events-none" />
 
-      <div className="hero-content relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+      <div className="hero-content relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center">
         {/* Status Pill */}
-        <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full text-xs font-semibold border border-slate-200/80 dark:border-white/[0.1] bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-xs mb-6 text-slate-700 dark:text-slate-200">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>{t('hero_status')}</span>
+        <div className="inline-flex items-center gap-2 py-1.5 px-3.5 sm:px-4 rounded-full text-[11px] sm:text-xs font-semibold border border-slate-200/80 dark:border-white/[0.1] bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-xs mb-5 sm:mb-6 text-slate-700 dark:text-slate-200 max-w-full">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+          <span className="truncate">{t('hero_status')}</span>
         </div>
 
         {/* Title */}
-        <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.12] max-w-3xl mb-5 text-dark dark:text-white">
+        <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.14] max-w-3xl mb-4 sm:mb-5 text-dark dark:text-white">
           <span>{t('hero_title')} </span>
-          <span className="highlight block sm:inline">{typedText || '\u00A0'}</span>
-          <span className="inline-block font-light text-primary animate-pulse ml-0.5">|</span>
+          <span className="inline-block sm:inline">
+            <span className="highlight">{typedText || '\u00A0'}</span>
+            <span className="inline-block font-light text-primary animate-pulse ml-0.5">|</span>
+          </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="hero-subtitle text-base sm:text-lg md:text-xl text-gray/85 dark:text-slate-300 max-w-2xl mb-8 leading-relaxed">
+        <p className="hero-subtitle text-sm sm:text-lg md:text-xl text-gray/85 dark:text-slate-300 max-w-2xl mb-7 sm:mb-8 leading-relaxed px-1">
           {t('hero_subtitle')}
         </p>
 
         {/* CTA Buttons */}
-        <div className="hero-cta flex flex-wrap gap-3.5 justify-center w-full max-w-md mb-12">
+        <div className="hero-cta flex flex-col sm:flex-row gap-3 w-full max-w-sm sm:max-w-md mb-9 sm:mb-12">
           <a
             href="#contact"
             onClick={(e) => handleActionClick(e, 'contact')}
-            className="flex-1 min-w-[160px] py-3.5 px-7 rounded-xl font-bold bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all text-center no-underline text-sm sm:text-base"
+            className="w-full sm:flex-1 py-3 sm:py-3.5 px-6 rounded-xl font-bold bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all text-center no-underline text-sm sm:text-base"
           >
             {t('btn_quote')}
           </a>
           <a
             href="#portfolio"
             onClick={(e) => handleActionClick(e, 'portfolio')}
-            className="flex-1 min-w-[160px] py-3.5 px-7 rounded-xl font-bold border border-slate-200 dark:border-white/[0.12] hover:border-primary/50 text-dark dark:text-white bg-white/75 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-0.5 transition-all text-center no-underline text-sm sm:text-base"
+            className="w-full sm:flex-1 py-3 sm:py-3.5 px-6 rounded-xl font-bold border border-slate-200 dark:border-white/[0.12] hover:border-primary/50 text-dark dark:text-white bg-white/75 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-0.5 transition-all text-center no-underline text-sm sm:text-base"
           >
             {t('nav_portfolio')}
           </a>
         </div>
 
         {/* Clean Metrics Bar */}
-        <div className="grid grid-cols-3 gap-6 sm:gap-12 px-7 py-4 rounded-2xl glass shadow-xs">
-          <div className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
+        <div className="w-full max-w-sm sm:max-w-lg grid grid-cols-3 gap-2 sm:gap-8 px-3 sm:px-7 py-3.5 sm:py-4 rounded-2xl glass shadow-xs">
+          <div className="flex flex-col items-center min-w-0">
+            <span className="text-xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
               {yearsCount}+
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400">
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400 truncate max-w-full">
               {t('stat_years')}
             </span>
           </div>
-          <div className="flex flex-col items-center border-x border-slate-200/70 dark:border-white/[0.08] px-4 sm:px-8">
-            <span className="text-2xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
+          <div className="flex flex-col items-center border-x border-slate-200/70 dark:border-white/[0.08] px-2 sm:px-6 min-w-0">
+            <span className="text-xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
               {projectsCount}+
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400">
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400 truncate max-w-full">
               {t('stat_projects')}
             </span>
           </div>
-          <div className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
+          <div className="flex flex-col items-center min-w-0">
+            <span className="text-xl sm:text-3xl font-extrabold text-primary leading-none mb-1">
               24/7
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400">
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-gray dark:text-slate-400 truncate max-w-full">
               {t('stat_support')}
             </span>
           </div>

@@ -151,10 +151,10 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
           </button>
 
           <ul
-            className={`nav-links flex items-center gap-1 list-none m-0 p-0 transition-all duration-300 md:static ${
+            className={`nav-links items-center gap-1 list-none m-0 p-0 transition-all duration-300 md:static md:flex ${
               mobileMenuOpen
-                ? 'fixed top-[68px] left-4 right-4 p-5 flex-col items-stretch bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border border-slate-200/70 dark:border-white/[0.08] rounded-2xl max-h-[calc(100vh-90px)] overflow-y-auto translate-y-0 opacity-100 visible'
-                : 'max-md:fixed max-md:top-[68px] max-md:left-4 max-md:right-4 max-md:p-5 max-md:flex-col max-md:translate-y-[-140%] max-md:opacity-0 max-md:invisible max-md:pointer-events-none'
+                ? 'flex fixed top-[64px] left-4 right-4 p-4 flex-col items-stretch bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border border-slate-200/70 dark:border-white/[0.08] rounded-2xl max-h-[calc(100vh-84px)] overflow-y-auto'
+                : 'hidden'
             }`}
           >
             <li className="w-full md:w-auto">

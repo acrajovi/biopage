@@ -47,9 +47,9 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="contact py-24 px-6 md:px-12 relative" id="contact">
+    <section className="contact py-20 sm:py-24 px-4 sm:px-6 md:px-12 relative" id="contact">
       <div className="container max-w-7xl mx-auto">
-        <div className="section-header text-center mb-16 max-w-3xl mx-auto">
+        <div className="section-header text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
           <span className="section-tag inline-block py-1.5 px-4 rounded-full text-xs font-bold border border-primary/20 bg-primary/10 text-primary uppercase tracking-wider mb-4">
             {t('contact_tag')}
           </span>
@@ -58,56 +58,56 @@ export const Contact: React.FC = () => {
           </h2>
         </div>
 
-        <div className="contact-grid grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="contact-grid grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Info Column */}
-          <div className="contact-info flex flex-col gap-6 w-full">
+          <div className="contact-info flex flex-col gap-4 sm:gap-6 w-full min-w-0">
             {/* Email Card */}
             <a href="mailto:jacosta@bio.com.py" className="contact-card-link no-underline text-inherit block">
-              <div className="contact-card flex items-center gap-5 p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm hover:translate-x-2 hover:border-primary transition-all duration-300">
-                <div className="contact-icon w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-lg flex-shrink-0">
+              <div className="contact-card flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm md:hover:translate-x-2 hover:border-primary transition-all duration-300">
+                <div className="contact-icon w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-primary text-white text-base sm:text-lg flex-shrink-0">
                   <i className="fas fa-envelope"></i>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-sm font-bold text-dark dark:text-white mb-0.5">Email</h4>
-                  <p className="text-sm text-gray/80 dark:text-gray/90 m-0">jacosta@bio.com.py</p>
+                  <p className="text-xs sm:text-sm text-gray/80 dark:text-gray/90 m-0 break-all sm:break-normal">jacosta@bio.com.py</p>
                 </div>
               </div>
             </a>
 
             {/* Phone Card */}
             <a href="tel:+595986355113" className="contact-card-link no-underline text-inherit block">
-              <div className="contact-card flex items-center gap-5 p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm hover:translate-x-2 hover:border-primary transition-all duration-300">
-                <div className="contact-icon w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-lg flex-shrink-0">
+              <div className="contact-card flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm md:hover:translate-x-2 hover:border-primary transition-all duration-300">
+                <div className="contact-icon w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-primary text-white text-base sm:text-lg flex-shrink-0">
                   <i className="fas fa-phone"></i>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-sm font-bold text-dark dark:text-white mb-0.5">{t('contact_phone')}</h4>
-                  <p className="text-sm text-gray/80 dark:text-gray/90 m-0">+595 986 355113</p>
+                  <p className="text-xs sm:text-sm text-gray/80 dark:text-gray/90 m-0">+595 986 355113</p>
                 </div>
               </div>
             </a>
 
             {/* WA Card */}
             <a href="https://wa.me/595986355113" target="_blank" rel="noopener noreferrer" className="contact-card-link no-underline text-inherit block">
-              <div className="contact-card flex items-center gap-5 p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm hover:translate-x-2 hover:border-primary transition-all duration-300">
-                <div className="contact-icon w-12 h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-emerald-500 to-teal-600 text-white text-lg flex-shrink-0">
+              <div className="contact-card flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm md:hover:translate-x-2 hover:border-primary transition-all duration-300">
+                <div className="contact-icon w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-emerald-500 to-teal-600 text-white text-base sm:text-lg flex-shrink-0">
                   <i className="fab fa-whatsapp"></i>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-sm font-bold text-dark dark:text-white mb-0.5">WhatsApp</h4>
-                  <p className="text-sm text-gray/80 dark:text-gray/90 m-0">+595 986 355113</p>
+                  <p className="text-xs sm:text-sm text-gray/80 dark:text-gray/90 m-0">+595 986 355113</p>
                 </div>
               </div>
             </a>
 
             {/* Location Card */}
-            <div className="contact-card flex items-center gap-5 p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm">
-              <div className="contact-icon w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-lg flex-shrink-0">
+            <div className="contact-card flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm">
+              <div className="contact-icon w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-primary text-white text-base sm:text-lg flex-shrink-0">
                 <i className="fas fa-map-marker-alt"></i>
               </div>
-              <div>
+              <div className="min-w-0">
                 <h4 className="text-sm font-bold text-dark dark:text-white mb-0.5">{t('contact_loc')}</h4>
-                <p className="text-sm text-gray/80 dark:text-gray/90 m-0">Capiatá, Paraguay</p>
+                <p className="text-xs sm:text-sm text-gray/80 dark:text-gray/90 m-0">Capiatá, Paraguay</p>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Form Column */}
-          <div className="contact-form-wrapper w-full p-8 md:p-10 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-3xl shadow-sm">
+          <div className="contact-form-wrapper w-full min-w-0 p-5 sm:p-8 md:p-10 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl sm:rounded-3xl shadow-sm">
             <form onSubmit={handleSubmit} className="contact-form flex flex-col gap-6">
               <div className="form-group flex flex-col gap-2">
                 <label htmlFor="name" className="text-sm font-semibold text-dark-medium dark:text-gray/90">{t('contact_form_name')}</label>

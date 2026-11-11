@@ -14,19 +14,28 @@ export const Reveal: React.FC<RevealProps> = ({ children, className = '', delayM
     const node = ref.current;
     if (!node) return;
 
+    const revealNow = () => setVisible(true);
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true);
+      revealNow();
+      return;
+    }
+
+    // Si ya está visible o arriba del viewport actual (por ejemplo tras navegar a un #ancla)
+    const rect = node.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 120) {
+      revealNow();
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
+        if (entry.isIntersecting || entry.boundingClientRect.top <= window.innerHeight + 120) {
+          revealNow();
           observer.disconnect();
         }
       },
-      { rootMargin: '0px 0px -36px 0px', threshold: 0.05 }
+      { rootMargin: '120px 0px 120px 0px', threshold: 0 }
     );
 
     observer.observe(node);
@@ -37,10 +46,9 @@ export const Reveal: React.FC<RevealProps> = ({ children, className = '', delayM
     <div
       ref={ref}
       className={`reveal-block ${visible ? 'reveal-visible' : ''} ${className}`}
-      style={delayMs > 0 ? { transitionDelay: `${delayMs}ms` } : undefined}
+      style={delayMs > 0 ? { transitionDelay: `${Math.min(delayMs, 160)}ms` } : undefined}
     >
       {children}
     </div>
   );
 };
-

@@ -77,36 +77,36 @@ export const Products: React.FC = () => {
         </div>
 
         {/* Showcase */}
-        <div className="products-grid grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 flex flex-col">
-            <div className="flex items-center gap-2 mb-4 p-1.5 bg-slate-100/85 dark:bg-slate-800/70 rounded-xl self-start border border-slate-200/70 dark:border-white/[0.08]">
+        <div className="products-grid grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="lg:col-span-7 min-w-0 flex flex-col">
+            <div className="flex flex-wrap sm:inline-flex items-center gap-1.5 mb-4 p-1.5 bg-slate-100/85 dark:bg-slate-800/70 rounded-xl w-full sm:w-auto sm:self-start border border-slate-200/70 dark:border-white/[0.08]">
               <button
                 type="button"
                 onClick={() => setActiveTab('erp')}
-                className={`py-2 px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                className={`flex-1 sm:flex-initial justify-center py-2 px-3 sm:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'erp'
                     ? 'bg-primary text-white shadow-sm'
                     : 'text-gray/85 dark:text-slate-300 hover:text-dark dark:hover:text-white'
                 }`}
               >
-                <i className="fas fa-desktop text-xs" />
+                <i className="fas fa-desktop text-xs shrink-0" />
                 <span>Sistema ERP &amp; Inventario</span>
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('catalog')}
-                className={`py-2 px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                className={`flex-1 sm:flex-initial justify-center py-2 px-3 sm:px-4 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'catalog'
                     ? 'bg-primary text-white shadow-sm'
                     : 'text-gray/85 dark:text-slate-300 hover:text-dark dark:hover:text-white'
                 }`}
               >
-                <i className="fas fa-store text-xs" />
+                <i className="fas fa-store text-xs shrink-0" />
                 <span>Tienda Online &amp; Catálogo</span>
               </button>
             </div>
 
-            <div className="product-image-card w-full aspect-16/10 rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 dark:border-white/[0.08] bg-slate-900 relative">
+            <div className="product-image-card w-full aspect-16/10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 dark:border-white/[0.08] bg-slate-900 relative">
               <img
                 src={activeTab === 'erp' ? '/images/work/1.png' : '/images/work/bioshop-catalog.jpg'}
                 alt={activeTab === 'erp' ? 'BIOSHOP ERP - Sistema de gestión y facturación' : 'BIOSHOP Catálogo E-Commerce'}
@@ -114,15 +114,15 @@ export const Products: React.FC = () => {
                 decoding="async"
                 className="w-full h-full object-cover transition-opacity duration-300"
               />
-              <div className="absolute bottom-4 right-4 bg-slate-950/80 backdrop-blur-md text-white text-xs py-1.5 px-3.5 rounded-full border border-white/10 flex items-center gap-2">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-slate-950/80 backdrop-blur-md text-white text-[11px] sm:text-xs py-1 sm:py-1.5 px-3 rounded-full border border-white/10 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span>{activeTab === 'erp' ? 'Vista ERP en Producción' : 'Vista Catálogo E-Commerce'}</span>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="relative overflow-hidden p-7 md:p-9 bg-white/85 dark:bg-slate-900/65 backdrop-blur-md border border-slate-200/75 dark:border-white/[0.08] rounded-3xl shadow-sm">
+          <div className="lg:col-span-5 min-w-0 flex flex-col justify-center">
+            <div className="relative overflow-hidden p-5 sm:p-7 md:p-9 bg-white/85 dark:bg-slate-900/65 backdrop-blur-md border border-slate-200/75 dark:border-white/[0.08] rounded-2xl sm:rounded-3xl shadow-sm">
               <div className="inline-block px-3 py-1 rounded-md bg-primary/10 text-primary dark:text-indigo-300 font-bold text-xs uppercase tracking-wider mb-3">
                 {t('prod_saas_badge')}
               </div>

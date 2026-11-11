@@ -55,12 +55,14 @@
   --glass-border: rgba(255, 255, 255, 0.08);
 }
 
+html,
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-main);
   color: var(--dark);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
   width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -79,12 +81,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Smooth GPU Scroll Reveal */
+/* Smooth GPU Scroll Reveal (never leaves content hidden) */
 .reveal-block {
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
-  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0.85;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
