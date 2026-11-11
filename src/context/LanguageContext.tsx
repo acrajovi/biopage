@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { translations } from './translations';
 import type { SupportedLanguages, TranslationDict } from './translations';
 
@@ -18,10 +18,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         return saved;
       }
     } catch {
-      // safe fallback if localStorage fails or is disabled (like under Safari file:// rules)
+      // safe fallback if localStorage fails or is disabled
     }
     return 'es';
   });
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const setLanguage = (lang: SupportedLanguages) => {
     setLanguageState(lang);

@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
             </a>
 
             {/* WA Card */}
-            <a href="https://wa.me/595986355113" target="_blank" rel="noreferrer" className="contact-card-link no-underline text-inherit block">
+            <a href="https://wa.me/595986355113" target="_blank" rel="noopener noreferrer" className="contact-card-link no-underline text-inherit block">
               <div className="contact-card flex items-center gap-5 p-5 bg-white dark:bg-gray-800/40 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl shadow-sm hover:translate-x-2 hover:border-primary transition-all duration-300">
                 <div className="contact-icon w-12 h-12 flex items-center justify-center rounded-xl bg-linear-to-r from-emerald-500 to-teal-600 text-white text-lg flex-shrink-0">
                   <i className="fab fa-whatsapp"></i>

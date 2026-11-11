@@ -48,7 +48,7 @@ export const FloatingActions: React.FC = () => {
         <a 
           href="https://wa.me/595986355113" 
           target="_blank" 
-          rel="noreferrer" 
+          rel="noopener noreferrer" 
           className="float-btn relative w-[46px] h-[46px] md:w-[50px] md:h-[50px] rounded-full flex items-center justify-center text-white text-xl md:text-2xl shadow-lg bg-linear-to-br from-emerald-500 to-teal-600 shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-1 hover:scale-108 transition-all duration-300 group"
           aria-label="Escribir por WhatsApp"
         >

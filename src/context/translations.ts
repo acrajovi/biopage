@@ -176,6 +176,24 @@ export interface TranslationDict {
   tools_btu_feat1: string;
   tools_btu_feat2: string;
   tools_btu_feat3: string;
+  tools_qr_title: string;
+  tools_qr_subtitle: string;
+  tools_qr_desc: string;
+  tools_qr_feat1: string;
+  tools_qr_feat2: string;
+  tools_qr_feat3: string;
+  apps_section_premium: string;
+  apps_section_free: string;
+  apps_bioshop_desc: string;
+  apps_ruc_desc: string;
+  apps_btu_desc: string;
+  apps_qr_desc: string;
+  apps_view_all: string;
+  port_badge_premium: string;
+  port_badge_free: string;
+  port_p5_desc: string;
+  port_p5_link: string;
+  hero_status: string;
 }
 
 export type SupportedLanguages = 'es' | 'en' | 'pt';
@@ -344,7 +362,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     nav_tools: "Herramientas",
     tools_tag: "Utilidades Web Gratuitas",
     tools_title: "Herramientas de Libre Acceso para tu Negocio y Hogar",
-    tools_subtitle: "Desarrollamos soluciones prácticas, gratuitas y de alto rendimiento que simplifican tareas tributarias y de climatización.",
+    tools_subtitle: "Desarrollamos soluciones prácticas, gratuitas y de alto rendimiento que simplifican tareas tributarias, de climatización y enlaces QR.",
     tools_badge_free: "Herramienta 100% Gratuita",
     tools_btn_launch: "Abrir Herramienta",
     tools_ruc_title: "Datos RUC Py",
@@ -358,7 +376,25 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     tools_btu_desc: "Calcula con precisión técnica la capacidad térmica requerida (BTU/h) para cualquier espacio según metros cuadrados, metros cúbicos, cantidad de personas y fuentes de calor.",
     tools_btu_feat1: "Cálculo volumétrico y dimensional exacto",
     tools_btu_feat2: "Recomendaciones de equipos Split, Inverter y Piso Techo",
-    tools_btu_feat3: "Optimización de eficiencia energética y consumo eléctrico"
+    tools_btu_feat3: "Optimización de eficiencia energética y consumo eléctrico",
+    tools_qr_title: "QR & Links",
+    tools_qr_subtitle: "Generador de Enlaces Directos y Códigos QR",
+    tools_qr_desc: "Crea enlaces directos de chat (wa.me) y códigos QR permanentes para sitios web y redes Wi-Fi sin acortadores ni fecha de caducidad, descargables en PNG y SVG vectorial.",
+    tools_qr_feat1: "Enlaces directos wa.me con mensaje y prefijo internacional",
+    tools_qr_feat2: "Códigos QR para URLs y Wi-Fi sin vencimiento ni intermediarios",
+    tools_qr_feat3: "Descarga gratuita en PNG hasta 2048px y SVG vectorial",
+    apps_section_premium: "Premium",
+    apps_section_free: "Gratis",
+    apps_bioshop_desc: "ERP SaaS, SIFEN & Tienda Online",
+    apps_ruc_desc: "Buscador de RUC DNIT Paraguay",
+    apps_btu_desc: "Cálculo térmico de climatización",
+    apps_qr_desc: "QR permanentes y links directos",
+    apps_view_all: "Ver todas las herramientas",
+    port_badge_premium: "Premium",
+    port_badge_free: "Gratis",
+    port_p5_desc: "Aplicación Web Progresiva (PWA) gratuita para crear enlaces directos wa.me y códigos QR permanentes (URLs y Wi-Fi) en PNG y SVG sin vencimiento.",
+    port_p5_link: "Visitar sitio",
+    hero_status: "Disponible para proyectos · Paraguay"
   },
   en: {
     nav_home: "Home",
@@ -523,7 +559,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     nav_tools: "Tools",
     tools_tag: "Free Web Utilities",
     tools_title: "Open-Access Tools for Your Business and Home",
-    tools_subtitle: "We build practical, free, high-performance web solutions that simplify tax verification and climate sizing tasks.",
+    tools_subtitle: "We build practical, free, high-performance web solutions that simplify tax verification, thermal sizing, and QR link tasks.",
     tools_badge_free: "100% Free Tool",
     tools_btn_launch: "Launch Tool",
     tools_ruc_title: "Datos RUC Py",
@@ -537,7 +573,25 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     tools_btu_desc: "Calculate with technical accuracy the cooling capacity needed (BTU/h) for any room based on square meters, volume, occupancy, and thermal exposure.",
     tools_btu_feat1: "Exact volumetric and dimensional sizing",
     tools_btu_feat2: "Equipment recommendations for Split and Inverter AC units",
-    tools_btu_feat3: "Energy efficiency and power consumption optimization"
+    tools_btu_feat3: "Energy efficiency and power consumption optimization",
+    tools_qr_title: "QR & Links",
+    tools_qr_subtitle: "Direct Link & Permanent QR Code Generator",
+    tools_qr_desc: "Create universal direct chat links (wa.me) and non-expiring QR codes for URLs and Wi-Fi networks, exportable in crisp PNG and vector SVG with full privacy.",
+    tools_qr_feat1: "Instant wa.me links with custom message & country code",
+    tools_qr_feat2: "Non-expiring URL & Wi-Fi QR codes with zero middlemen",
+    tools_qr_feat3: "Free download in PNG up to 2048px and scalable SVG",
+    apps_section_premium: "Premium",
+    apps_section_free: "Free",
+    apps_bioshop_desc: "ERP SaaS, SIFEN & Online Store",
+    apps_ruc_desc: "Paraguay Taxpayer ID Search",
+    apps_btu_desc: "AC Thermal Sizing Calculator",
+    apps_qr_desc: "Permanent QR & direct chat links",
+    apps_view_all: "View all free tools",
+    port_badge_premium: "Premium",
+    port_badge_free: "Free",
+    port_p5_desc: "Free Progressive Web App (PWA) to generate permanent wa.me links and non-expiring QR codes for URLs and Wi-Fi in PNG and SVG.",
+    port_p5_link: "Visit site",
+    hero_status: "Available for new projects · Paraguay"
   },
   pt: {
     nav_home: "Início",
@@ -559,7 +613,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     stat_projects: "Projetos",
     stat_support: "Suporte",
     about_tag: "Sobre Nós",
-    about_title: "Somos una startup de tecnologia",
+    about_title: "Somos uma startup de tecnologia",
     about_desc: "Dedicamo-nos à inovação e ao desenvolvimento de soluções completas em aplicativos web e sistemas.",
     about_feat1_title: "Criativos",
     about_feat1_desc: "Combinamos habilidades e ideias para criar soluções focadas no usuário.",
@@ -702,7 +756,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     nav_tools: "Ferramentas",
     tools_tag: "Utilitários Web Gratuitos",
     tools_title: "Ferramentas de Acesso Gratuito para Negócios e Residências",
-    tools_subtitle: "Desenvolvemos soluções práticas, gratuitas e de alto desempenho que simplificam consultas fiscais e dimensionamento térmico.",
+    tools_subtitle: "Desenvolvemos soluções práticas, gratuitas e de alto desempenho que simplificam consultas fiscais, cálculo térmico e links QR.",
     tools_badge_free: "Ferramenta 100% Gratuita",
     tools_btn_launch: "Abrir Ferramenta",
     tools_ruc_title: "Datos RUC Py",
@@ -716,6 +770,24 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     tools_btu_desc: "Calcule com exatidão técnica a capacidade de refrigeração necessária (BTU/h) para qualquer ambiente conforme dimensões, ocupantes e fontes de calor.",
     tools_btu_feat1: "Dimensionamento volumétrico e dimensional preciso",
     tools_btu_feat2: "Recomendações de aparelhos Split, Inverter e Piso-Teto",
-    tools_btu_feat3: "Otimização do consumo de energia e eficiência térmica"
+    tools_btu_feat3: "Otimização do consumo de energia e eficiência térmica",
+    tools_qr_title: "QR & Links",
+    tools_qr_subtitle: "Gerador de Links Diretos e Códigos QR",
+    tools_qr_desc: "Crie links diretos de chat (wa.me) e códigos QR permanentes para sites e redes Wi-Fi sem encurtadores ou expiração, com exportação em PNG e SVG vetorial.",
+    tools_qr_feat1: "Links diretos wa.me com mensagem e código DDI",
+    tools_qr_feat2: "Códigos QR para URLs e Wi-Fi sem vencimento",
+    tools_qr_feat3: "Download gratuito em PNG até 2048px e SVG vetorial",
+    apps_section_premium: "Premium",
+    apps_section_free: "Grátis",
+    apps_bioshop_desc: "ERP SaaS, SIFEN & Loja Virtual",
+    apps_ruc_desc: "Consulta RUC DNIT Paraguai",
+    apps_btu_desc: "Cálculo térmico de climatização",
+    apps_qr_desc: "QR permanentes e links diretos",
+    apps_view_all: "Ver todas as ferramentas",
+    port_badge_premium: "Premium",
+    port_badge_free: "Grátis",
+    port_p5_desc: "Aplicativo Web Progressivo (PWA) gratuito para criar links diretos wa.me e códigos QR permanentes (URLs e Wi-Fi) em PNG e SVG sem expiração.",
+    port_p5_link: "Visitar site",
+    hero_status: "Disponível para projetos · Paraguai"
   }
 };

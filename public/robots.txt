@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Host: https://bio.com.py
 Sitemap: https://bio.com.py/sitemap.xml

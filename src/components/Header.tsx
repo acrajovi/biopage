@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguages } from '../context/translations';
+import { scrollToSection } from '../utils/scroll';
 
 interface HeaderProps {
   scrolled: boolean;
@@ -12,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [appsDropdownOpen, setAppsDropdownOpen] = useState(false);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
-  
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,7 +30,6 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const appsRef = useRef<HTMLLIElement>(null);
   const langRef = useRef<HTMLLIElement>(null);
 
-  // Apply theme to document
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'dark') {
@@ -41,10 +41,11 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     }
     try {
       localStorage.setItem('theme', theme);
-    } catch {}
+    } catch {
+      // storage disabled
+    }
   }, [theme]);
 
-  // Click outside to close dropdowns
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -55,32 +56,34 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
         setLangDropdownOpen(false);
       }
     };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setAppsDropdownOpen(false);
+        setLangDropdownOpen(false);
+        setMobileMenuOpen(false);
+      }
+    };
     document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const navigateToSection = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
+    setAppsDropdownOpen(false);
+
     if (location.pathname !== '/') {
       navigate(`/#${targetId}`);
     } else {
-      const element = document.getElementById(targetId);
-      if (element) {
-        const header = document.querySelector('.header') as HTMLElement;
-        const headerHeight = header ? header.offsetHeight : 70;
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerHeight;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+      scrollToSection(targetId);
     }
   };
 
@@ -90,110 +93,248 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     return '🇧🇷';
   };
 
+  const freeApps = [
+    {
+      name: 'Datos RUC Py',
+      desc: t('apps_ruc_desc'),
+      href: 'https://datosruc.bio.com.py/',
+      icon: 'fa-id-card',
+    },
+    {
+      name: 'Calcular BTU',
+      desc: t('apps_btu_desc'),
+      href: 'https://calcularbtu.bio.com.py/',
+      icon: 'fa-temperature-low',
+    },
+    {
+      name: 'QR & Links',
+      desc: t('apps_qr_desc'),
+      href: 'https://qr.bio.com.py/',
+      icon: 'fa-qrcode',
+    },
+  ];
+
+  const navLinkClass =
+    'nav-link block py-2.5 px-3.5 md:py-2 md:px-3 text-sm font-semibold rounded-xl text-dark/90 dark:text-slate-200 hover:text-primary dark:hover:text-white hover:bg-primary/8 dark:hover:bg-white/[0.06] transition-colors no-underline whitespace-nowrap';
+
   return (
-    <header className={`header fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
-      scrolled 
-        ? 'py-3 bg-white/80 dark:bg-gray-900/80 shadow-md backdrop-blur-md border-b border-gray-200/20 dark:border-gray-800/20' 
-        : 'py-5 bg-transparent'
-    }`}>
-      <nav className="nav max-w-7xl mx-auto px-6 md:px-8">
-        <div className="nav-container flex items-center justify-between">
-          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="logo flex items-center gap-3 no-underline">
-            <img src="/images/onlyLogo.png" alt="BIO" className="logo-img w-9 h-9 object-contain" />
-            <span className="logo-text text-xl font-extrabold tracking-tight bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">BIO</span>
-          </a>
-          
-          <button 
-            className="menu-toggle flex md:hidden flex-col justify-between w-6 h-4.5 bg-transparent border-none cursor-pointer z-[101]"
-            onClick={() => setMobileMenuOpen(prev => !prev)}
-            aria-label="Toggle menu"
+    <header
+      className={`header fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
+        scrolled
+          ? 'py-2.5 bg-white/85 dark:bg-[#060913]/85 shadow-sm backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.07]'
+          : 'py-4 bg-transparent'
+      }`}
+    >
+      <nav className="nav max-w-7xl mx-auto px-5 md:px-8" aria-label="Navegación principal">
+        <div className="nav-container flex items-center justify-between gap-4">
+          <a
+            href="#home"
+            onClick={(e) => navigateToSection(e, 'home')}
+            className="logo flex items-center gap-2.5 no-underline shrink-0"
           >
-            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 origin-left ${mobileMenuOpen ? 'rotate-45 translate-y-[-1px]' : ''}`}></span>
-            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 origin-left ${mobileMenuOpen ? '-rotate-45 translate-y-[1px]' : ''}`}></span>
+            <img src="/images/onlyLogo.png" alt="BIO Soluciones Tecnológicas" className="w-8 h-8 object-contain" />
+            <span className="text-lg font-extrabold tracking-tight bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              BIO
+            </span>
+          </a>
+
+          <button
+            type="button"
+            className="menu-toggle flex md:hidden flex-col justify-between w-6 h-4.5 bg-transparent border-none cursor-pointer z-[101]"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 origin-left ${mobileMenuOpen ? 'rotate-45 translate-y-[-1px]' : ''}`} />
+            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`w-full h-[2px] bg-dark dark:bg-white rounded-sm transition-all duration-300 origin-left ${mobileMenuOpen ? '-rotate-45 translate-y-[1px]' : ''}`} />
           </button>
 
-          <ul className={`nav-links flex items-center gap-1 md:gap-2 list-none m-0 p-0 transition-all duration-300 md:static ${
-            mobileMenuOpen 
-              ? 'fixed top-[70px] left-6 right-6 p-6 flex-col bg-white dark:bg-gray-900 shadow-xl border border-gray-200/50 dark:border-gray-800/50 rounded-xl max-h-[calc(100vh-100px)] overflow-y-auto translate-y-0 opacity-100 visible' 
-              : 'max-md:fixed max-md:top-[70px] max-md:left-6 max-md:right-6 max-md:p-6 max-md:flex-col max-md:bg-white max-md:dark:bg-gray-900 max-md:shadow-xl max-md:border max-md:border-gray-200/50 max-md:dark:border-gray-800/50 max-md:rounded-xl max-md:translate-y-[-150%] max-md:opacity-0 max-md:visibility-hidden max-md:pointer-events-none'
-          }`}>
-            <li className="w-full md:w-auto"><a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_home')}</a></li>
-            <li className="w-full md:w-auto"><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_about')}</a></li>
-            <li className="w-full md:w-auto"><a href="#process" onClick={(e) => handleNavClick(e, 'process')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_process')}</a></li>
-            <li className="w-full md:w-auto"><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_services')}</a></li>
-            <li className="w-full md:w-auto"><a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_portfolio')}</a></li>
-            <li className="w-full md:w-auto"><a href="#products" onClick={(e) => handleNavClick(e, 'products')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_products')}</a></li>
-            <li className="w-full md:w-auto"><a href="#tools" onClick={(e) => handleNavClick(e, 'tools')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_tools')}</a></li>
-            
-            {/* Apps Dropdown */}
+          <ul
+            className={`nav-links flex items-center gap-1 list-none m-0 p-0 transition-all duration-300 md:static ${
+              mobileMenuOpen
+                ? 'fixed top-[68px] left-4 right-4 p-5 flex-col items-stretch bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border border-slate-200/70 dark:border-white/[0.08] rounded-2xl max-h-[calc(100vh-90px)] overflow-y-auto translate-y-0 opacity-100 visible'
+                : 'max-md:fixed max-md:top-[68px] max-md:left-4 max-md:right-4 max-md:p-5 max-md:flex-col max-md:translate-y-[-140%] max-md:opacity-0 max-md:invisible max-md:pointer-events-none'
+            }`}
+          >
+            <li className="w-full md:w-auto">
+              <a href="#home" onClick={(e) => navigateToSection(e, 'home')} className={navLinkClass}>
+                {t('nav_home')}
+              </a>
+            </li>
+            <li className="w-full md:w-auto">
+              <a href="#about" onClick={(e) => navigateToSection(e, 'about')} className={navLinkClass}>
+                {t('nav_about')}
+              </a>
+            </li>
+            <li className="w-full md:w-auto">
+              <a href="#services" onClick={(e) => navigateToSection(e, 'services')} className={navLinkClass}>
+                {t('nav_services')}
+              </a>
+            </li>
+            <li className="w-full md:w-auto">
+              <a href="#portfolio" onClick={(e) => navigateToSection(e, 'portfolio')} className={navLinkClass}>
+                {t('nav_portfolio')}
+              </a>
+            </li>
+
+            {/* Grouped Apps Dropdown (Premium BIOSHOP first, then Free tools) */}
             <li ref={appsRef} className="dropdown relative w-full md:w-auto">
-              <a 
-                href="javascript:void(0)" 
-                onClick={() => setAppsDropdownOpen(prev => !prev)}
-                className="nav-link flex items-center justify-between py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline"
+              <button
+                type="button"
+                aria-expanded={appsDropdownOpen}
+                onClick={() => setAppsDropdownOpen((prev) => !prev)}
+                className={`${navLinkClass} w-full flex items-center justify-between gap-1.5 border-none bg-transparent cursor-pointer`}
               >
                 <span>{t('nav_apps')}</span>
-                <i className={`fas fa-chevron-down ml-1 text-xs transition-transform duration-300 ${appsDropdownOpen ? 'rotate-180' : ''}`}></i>
-              </a>
-              <ul className={`dropdown-menu w-full md:absolute md:top-full md:left-0 md:w-48 mt-1 p-2 bg-white dark:bg-gray-800 md:shadow-lg border border-gray-200/50 dark:border-gray-700/50 rounded-xl list-none ${
-                appsDropdownOpen ? 'block' : 'hidden'
-              }`}>
-                <li>
-                  <a href="https://datosruc.bio.com.py/" target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 p-2.5 text-sm font-medium rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 no-underline transition-colors">
-                    <i className="fas fa-database text-primary"></i> Datos RUC Py
-                  </a>
-                </li>
-                <li>
-                  <a href="https://calcularbtu.bio.com.py/" target="_blank" rel="noreferrer" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 p-2.5 text-sm font-medium rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 no-underline transition-colors">
-                    <i className="fas fa-temperature-low text-primary"></i> Calcular BTU
-                  </a>
-                </li>
-              </ul>
-            </li>
+                <i className={`fas fa-chevron-down text-[10px] transition-transform duration-200 ${appsDropdownOpen ? 'rotate-180 text-primary' : 'opacity-70'}`} />
+              </button>
 
-            <li className="w-full md:w-auto"><a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_faq')}</a></li>
-            <li className="w-full md:w-auto"><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="nav-link block py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline">{t('nav_contact')}</a></li>
-            
-            {/* Lang Dropdown */}
-            <li ref={langRef} className="dropdown lang-dropdown relative w-full md:w-auto">
-              <a 
-                href="javascript:void(0)" 
-                onClick={() => setLangDropdownOpen(prev => !prev)}
-                className="nav-link flex items-center justify-between py-3 px-4 md:py-2 md:px-3 text-sm font-semibold rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 transition-colors no-underline"
+              <div
+                className={`w-full md:w-72 md:absolute md:top-full md:right-0 mt-1.5 p-2.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl md:shadow-2xl border border-slate-200/70 dark:border-white/[0.08] rounded-2xl transition-all duration-200 ${
+                  appsDropdownOpen ? 'block animate-[fadeIn_0.18s_ease-out]' : 'hidden'
+                }`}
               >
-                <span className="flex items-center gap-1.5">{getLangFlag(language)} {language.toUpperCase()}</span>
-                <i className={`fas fa-chevron-down ml-1 text-xs transition-transform duration-300 ${langDropdownOpen ? 'rotate-180' : ''}`}></i>
+                {/* Premium Division */}
+                <div className="px-2.5 pt-1 pb-1.5 flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">
+                    {t('apps_section_premium')}
+                  </span>
+                  <span className="h-px flex-grow ml-2 bg-amber-500/20" />
+                </div>
+
+                <a
+                  href="#products"
+                  onClick={(e) => navigateToSection(e, 'products')}
+                  className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-linear-to-r from-primary/8 to-accent/8 hover:from-primary/14 hover:to-accent/14 border border-primary/20 dark:border-primary/25 transition-all no-underline group"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs shrink-0 shadow-xs">
+                      <i className="fas fa-cubes" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors">
+                        BIOSHOP
+                      </div>
+                      <div className="text-[11px] text-gray/80 dark:text-slate-400 truncate">
+                        {t('apps_bioshop_desc')}
+                      </div>
+                    </div>
+                  </div>
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 shrink-0">
+                    {t('apps_section_premium')}
+                  </span>
+                </a>
+
+                {/* Free Division */}
+                <div className="px-2.5 pt-3 pb-1.5 flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                    {t('apps_section_free')}
+                  </span>
+                  <span className="h-px flex-grow ml-2 bg-emerald-500/20" />
+                </div>
+
+                <div className="space-y-1">
+                  {freeApps.map((app) => (
+                    <a
+                      key={app.name}
+                      href={app.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setAppsDropdownOpen(false);
+                        setMobileMenuOpen(false);
+                      }}
+                      className="flex items-center justify-between gap-2.5 p-2 rounded-xl hover:bg-slate-100/80 dark:hover:bg-white/[0.06] transition-colors no-underline group"
+                    >
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-slate-800 text-primary dark:text-secondary flex items-center justify-center text-xs shrink-0 group-hover:scale-105 transition-transform">
+                          <i className={`fas ${app.icon}`} />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-xs font-bold text-dark dark:text-slate-100 group-hover:text-primary transition-colors">
+                            {app.name}
+                          </div>
+                          <div className="text-[11px] text-gray/75 dark:text-slate-400 truncate">
+                            {app.desc}
+                          </div>
+                        </div>
+                      </div>
+                      <span className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-emerald-500/12 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 shrink-0">
+                        {t('apps_section_free')}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+
+                <div className="mt-2 pt-2 border-t border-slate-200/70 dark:border-white/[0.06]">
+                  <a
+                    href="#tools"
+                    onClick={(e) => navigateToSection(e, 'tools')}
+                    className="flex items-center justify-center gap-1.5 py-1.5 text-xs font-semibold text-primary hover:text-primary-dark dark:text-indigo-400 no-underline transition-colors"
+                  >
+                    <span>{t('apps_view_all')}</span>
+                    <i className="fas fa-arrow-right text-[10px]" />
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li className="w-full md:w-auto">
+              <a href="#contact" onClick={(e) => navigateToSection(e, 'contact')} className={navLinkClass}>
+                {t('nav_contact')}
               </a>
-              <ul className={`dropdown-menu w-full md:absolute md:top-full md:right-0 md:w-40 mt-1 p-2 bg-white dark:bg-gray-800 md:shadow-lg border border-gray-200/50 dark:border-gray-700/50 rounded-xl list-none ${
-                langDropdownOpen ? 'block' : 'hidden'
-              }`}>
-                <li>
-                  <button onClick={() => { setLanguage('es'); setLangDropdownOpen(false); setMobileMenuOpen(false); }} className="w-full flex items-center gap-2 p-2.5 text-sm font-medium rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 text-left cursor-pointer border-none bg-transparent">
-                    🇵🇾 Español
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => { setLanguage('en'); setLangDropdownOpen(false); setMobileMenuOpen(false); }} className="w-full flex items-center gap-2 p-2.5 text-sm font-medium rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 text-left cursor-pointer border-none bg-transparent">
-                    🇺🇸 English
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => { setLanguage('pt'); setLangDropdownOpen(false); setMobileMenuOpen(false); }} className="w-full flex items-center gap-2 p-2.5 text-sm font-medium rounded-lg text-dark dark:text-white hover:bg-primary/8 dark:hover:bg-primary/10 text-left cursor-pointer border-none bg-transparent">
-                    🇧🇷 Português
-                  </button>
-                </li>
+            </li>
+
+            <li className="hidden md:block h-5 w-px bg-slate-200/80 dark:bg-white/[0.1] mx-1" aria-hidden="true" />
+
+            {/* Language & Theme Controls */}
+            <li ref={langRef} className="dropdown relative w-full md:w-auto">
+              <button
+                type="button"
+                aria-expanded={langDropdownOpen}
+                onClick={() => setLangDropdownOpen((prev) => !prev)}
+                className={`${navLinkClass} w-full flex items-center justify-between gap-1.5 border-none bg-transparent cursor-pointer`}
+              >
+                <span className="flex items-center gap-1.5 text-xs font-bold">
+                  {getLangFlag(language)} {language.toUpperCase()}
+                </span>
+                <i className={`fas fa-chevron-down text-[10px] transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : 'opacity-70'}`} />
+              </button>
+              <ul
+                className={`dropdown-menu w-full md:absolute md:top-full md:right-0 md:w-40 mt-1.5 p-1.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl md:shadow-xl border border-slate-200/70 dark:border-white/[0.08] rounded-xl list-none ${
+                  langDropdownOpen ? 'block' : 'hidden'
+                }`}
+              >
+                {(['es', 'en', 'pt'] as SupportedLanguages[]).map((langOption) => (
+                  <li key={langOption}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setLanguage(langOption);
+                        setLangDropdownOpen(false);
+                        setMobileMenuOpen(false);
+                      }}
+                      className="w-full flex items-center gap-2 p-2 text-xs font-semibold rounded-lg text-dark dark:text-slate-200 hover:bg-primary/10 text-left cursor-pointer border-none bg-transparent"
+                    >
+                      <span>{getLangFlag(langOption)}</span>
+                      <span>
+                        {langOption === 'es' ? 'Español' : langOption === 'en' ? 'English' : 'Português'}
+                      </span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </li>
 
-            {/* Dark Mode Toggle */}
-            <li className="w-full md:w-auto flex justify-center md:block pt-3 md:pt-0">
-              <button 
+            <li className="w-full md:w-auto flex justify-center md:block pt-2 md:pt-0">
+              <button
+                type="button"
                 onClick={toggleTheme}
-                className="dark-mode-toggle w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-primary/10 dark:hover:bg-primary/15 text-dark dark:text-white border-none cursor-pointer transition-colors"
+                className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100/90 dark:bg-white/[0.06] hover:bg-primary/10 dark:hover:bg-white/[0.12] text-dark dark:text-slate-200 border border-slate-200/60 dark:border-white/[0.08] cursor-pointer transition-colors"
                 aria-label="Toggle theme"
               >
-                <i className={`fas ${theme === 'dark' ? 'fa-sun text-yellow-400' : 'fa-moon text-primary'}`}></i>
+                <i className={`fas ${theme === 'dark' ? 'fa-sun text-amber-400' : 'fa-moon text-primary'} text-sm`} />
               </button>
             </li>
           </ul>
