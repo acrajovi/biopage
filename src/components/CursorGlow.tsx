@@ -59,3 +59,4 @@ export const CursorGlow: React.FC = () => {
     />
   );
 };
+

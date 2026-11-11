@@ -43,3 +43,4 @@ export const Reveal: React.FC<RevealProps> = ({ children, className = '', delayM
     </div>
   );
 };
+

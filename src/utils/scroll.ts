@@ -11,3 +11,4 @@ export function scrollToSection(targetId: string): void {
     behavior: 'smooth',
   });
 }
+
