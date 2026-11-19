@@ -185,6 +185,7 @@ export interface TranslationDict {
   apps_section_premium: string;
   apps_section_free: string;
   apps_bioshop_desc: string;
+  apps_biocredit_desc: string;
   apps_ruc_desc: string;
   apps_btu_desc: string;
   apps_qr_desc: string;
@@ -193,6 +194,8 @@ export interface TranslationDict {
   port_badge_free: string;
   port_p5_desc: string;
   port_p5_link: string;
+  port_p6_desc: string;
+  port_p6_link: string;
   hero_status: string;
 }
 
@@ -386,6 +389,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     apps_section_premium: "Premium",
     apps_section_free: "Gratis",
     apps_bioshop_desc: "ERP SaaS, SIFEN & Tienda Online",
+    apps_biocredit_desc: "SaaS de créditos y cobranzas",
     apps_ruc_desc: "Buscador de RUC DNIT Paraguay",
     apps_btu_desc: "Cálculo térmico de climatización",
     apps_qr_desc: "QR permanentes y links directos",
@@ -394,6 +398,8 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     port_badge_free: "Gratis",
     port_p5_desc: "Aplicación Web Progresiva (PWA) gratuita para crear enlaces directos wa.me y códigos QR permanentes (URLs y Wi-Fi) en PNG y SVG sin vencimiento.",
     port_p5_link: "Visitar sitio",
+    port_p6_desc: "Plataforma SaaS para casas de crédito: gestión de clientes, préstamos, cuotas, cobranzas y cumplimiento normativo en Paraguay.",
+    port_p6_link: "Ver demostración",
     hero_status: "Disponible para proyectos · Paraguay"
   },
   en: {
@@ -583,6 +589,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     apps_section_premium: "Premium",
     apps_section_free: "Free",
     apps_bioshop_desc: "ERP SaaS, SIFEN & Online Store",
+    apps_biocredit_desc: "Loan & collections management SaaS",
     apps_ruc_desc: "Paraguay Taxpayer ID Search",
     apps_btu_desc: "AC Thermal Sizing Calculator",
     apps_qr_desc: "Permanent QR & direct chat links",
@@ -591,6 +598,8 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     port_badge_free: "Free",
     port_p5_desc: "Free Progressive Web App (PWA) to generate permanent wa.me links and non-expiring QR codes for URLs and Wi-Fi in PNG and SVG.",
     port_p5_link: "Visit site",
+    port_p6_desc: "SaaS platform for loan companies: customer, loan, installment, collections and regulatory compliance management in Paraguay.",
+    port_p6_link: "View demo",
     hero_status: "Available for new projects · Paraguay"
   },
   pt: {
@@ -780,6 +789,7 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     apps_section_premium: "Premium",
     apps_section_free: "Grátis",
     apps_bioshop_desc: "ERP SaaS, SIFEN & Loja Virtual",
+    apps_biocredit_desc: "SaaS de crédito e cobrança",
     apps_ruc_desc: "Consulta RUC DNIT Paraguai",
     apps_btu_desc: "Cálculo térmico de climatização",
     apps_qr_desc: "QR permanentes e links diretos",
@@ -788,6 +798,8 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     port_badge_free: "Grátis",
     port_p5_desc: "Aplicativo Web Progressivo (PWA) gratuito para criar links diretos wa.me e códigos QR permanentes (URLs e Wi-Fi) em PNG e SVG sem expiração.",
     port_p5_link: "Visitar site",
+    port_p6_desc: "Plataforma SaaS para casas de crédito: gestão de clientes, empréstimos, parcelas, cobranças e conformidade regulatória no Paraguai.",
+    port_p6_link: "Ver demonstração",
     hero_status: "Disponível para projetos · Paraguai"
   }
 };

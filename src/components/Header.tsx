@@ -17,15 +17,22 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+  // Igual que el idioma: el HTML prerenderizado es light y la preferencia
+  // real se aplica tras el montaje para no romper la hidratación.
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
     try {
       const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || saved === 'light') return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (saved === 'dark' || saved === 'light') {
+        setTheme(saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      }
     } catch {
-      return 'light';
+      // se mantiene el tema claro por defecto
     }
-  });
+  }, []);
 
   const appsRef = useRef<HTMLLIElement>(null);
   const langRef = useRef<HTMLLIElement>(null);
@@ -92,6 +99,25 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     if (lang === 'en') return '🇺🇸';
     return '🇧🇷';
   };
+
+  const premiumApps = [
+    {
+      name: 'BIOSHOP',
+      desc: t('apps_bioshop_desc'),
+      href: '#products',
+      icon: 'fa-cubes',
+      iconClass: 'bg-primary text-white',
+      internal: true,
+    },
+    {
+      name: 'BioCredit',
+      desc: t('apps_biocredit_desc'),
+      href: 'https://credit-demo.bio.com.py/',
+      icon: 'fa-hand-holding-dollar',
+      iconClass: 'bg-indigo-600 text-white',
+      internal: false,
+    },
+  ];
 
   const freeApps = [
     {
@@ -203,28 +229,42 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
                   <span className="h-px flex-grow ml-2 bg-amber-500/20" />
                 </div>
 
-                <a
-                  href="#products"
-                  onClick={(e) => navigateToSection(e, 'products')}
-                  className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-linear-to-r from-primary/8 to-accent/8 hover:from-primary/14 hover:to-accent/14 border border-primary/20 dark:border-primary/25 transition-all no-underline group"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <div className="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center text-xs shrink-0 shadow-xs">
-                      <i className="fas fa-cubes" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors">
-                        BIOSHOP
+                <div className="space-y-1">
+                  {premiumApps.map((app) => (
+                    <a
+                      key={app.name}
+                      href={app.href}
+                      target={app.internal ? undefined : '_blank'}
+                      rel={app.internal ? undefined : 'noopener noreferrer'}
+                      onClick={(e) => {
+                        if (app.internal) {
+                          navigateToSection(e, 'products');
+                        } else {
+                          setAppsDropdownOpen(false);
+                          setMobileMenuOpen(false);
+                        }
+                      }}
+                      className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-linear-to-r from-primary/8 to-accent/8 hover:from-primary/14 hover:to-accent/14 border border-primary/20 dark:border-primary/25 transition-all no-underline group"
+                    >
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <div className={`w-8 h-8 rounded-lg ${app.iconClass} flex items-center justify-center text-xs shrink-0 shadow-xs`}>
+                          <i className={`fas ${app.icon}`} />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors">
+                            {app.name}
+                          </div>
+                          <div className="text-[11px] text-gray/80 dark:text-slate-400 truncate">
+                            {app.desc}
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-[11px] text-gray/80 dark:text-slate-400 truncate">
-                        {t('apps_bioshop_desc')}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 shrink-0">
-                    {t('apps_section_premium')}
-                  </span>
-                </a>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 shrink-0">
+                        {t('apps_section_premium')}
+                      </span>
+                    </a>
+                  ))}
+                </div>
 
                 {/* Free Division */}
                 <div className="px-2.5 pt-3 pb-1.5 flex items-center justify-between">

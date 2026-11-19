@@ -19,7 +19,7 @@ RUN printf '%s\n' \
   '  server_name _;' \
   '  root /usr/share/nginx/html;' \
   '  index index.html;' \
-  '  location / { try_files $uri $uri/ /index.html; }' \
+  '  location / { try_files $uri $uri/index.html /index.html; }' \
   '  location ~* \.(js|css|png|jpg|jpeg|gif|svg|webp|woff2?)$ { expires 1y; add_header Cache-Control "public, immutable"; }' \
   '}' > /etc/nginx/conf.d/default.conf
 EXPOSE 80

@@ -11,21 +11,25 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<SupportedLanguages>(() => {
-    try {
-      const saved = localStorage.getItem('lang');
-      if (saved === 'es' || saved === 'en' || saved === 'pt') {
-        return saved;
-      }
-    } catch {
-      // safe fallback if localStorage fails or is disabled
-    }
-    return 'es';
-  });
+  // El servidor renderiza siempre en español. El idioma guardado se aplica
+  // después del montaje para que el HTML prerenderizado y la hidratación
+  // coincidan exactamente (evita mismatches y parpadeos).
+  const [language, setLanguageState] = useState<SupportedLanguages>('es');
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('lang');
+      if (saved === 'es' || saved === 'en' || saved === 'pt') {
+        setLanguageState(saved);
+      }
+    } catch {
+      // almacenamiento deshabilitado: se mantiene el español
+    }
+  }, []);
 
   const setLanguage = (lang: SupportedLanguages) => {
     setLanguageState(lang);

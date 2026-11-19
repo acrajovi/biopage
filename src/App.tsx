@@ -1,17 +1,12 @@
-import React, { Suspense, lazy, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { CursorGlow } from './components/CursorGlow';
 import { FloatingActions } from './components/FloatingActions';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
-
-const PrivacyPolicy = lazy(() =>
-  import('./pages/PrivacyPolicy').then((m) => ({ default: m.PrivacyPolicy }))
-);
-const TermsAndConditions = lazy(() =>
-  import('./pages/TermsAndConditions').then((m) => ({ default: m.TermsAndConditions }))
-);
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsAndConditions } from './pages/TermsAndConditions';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +22,6 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <Router>
       <div className="app flex flex-col min-h-screen w-full overflow-x-clip">
         <CursorGlow />
 
@@ -53,19 +47,16 @@ const App: React.FC = () => {
         <Header scrolled={scrolled} />
 
         <main className="relative z-10 flex flex-col flex-grow">
-          <Suspense fallback={<div className="min-h-screen" />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/privacidad" element={<PrivacyPolicy />} />
-              <Route path="/terminos" element={<TermsAndConditions />} />
-            </Routes>
-          </Suspense>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacidad" element={<PrivacyPolicy />} />
+            <Route path="/terminos" element={<TermsAndConditions />} />
+          </Routes>
         </main>
 
         <Footer />
         <FloatingActions />
       </div>
-    </Router>
   );
 };
 

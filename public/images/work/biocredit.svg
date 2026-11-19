@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Vista previa del panel de BioCredit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef2ff"/>
+      <stop offset="0.55" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="sidebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#312e81" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="44" width="1104" height="712" rx="18" fill="#ffffff"/>
+  </g>
+
+  <!-- Barra superior -->
+  <path d="M48 62 A18 18 0 0 1 66 44 H1134 A18 18 0 0 1 1152 62 V96 H48 Z" fill="#f8fafc"/>
+  <line x1="48" y1="96" x2="1152" y2="96" stroke="#e2e8f0"/>
+  <circle cx="78" cy="70" r="6" fill="#f87171"/>
+  <circle cx="100" cy="70" r="6" fill="#fbbf24"/>
+  <circle cx="122" cy="70" r="6" fill="#34d399"/>
+  <rect x="166" y="57" width="330" height="26" rx="13" fill="#eef2ff"/>
+  <text x="186" y="74" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6366f1">credit-demo.bio.com.py / dashboard</text>
+
+  <!-- Sidebar -->
+  <path d="M48 96 H278 V738 A18 18 0 0 1 260 756 H66 A18 18 0 0 1 48 738 Z" fill="url(#sidebar)"/>
+  <rect x="70" y="122" width="34" height="34" rx="9" fill="#6366f1"/>
+  <path d="M79 143 L84 131 L89 143 Z M93 143 L98 131 L103 143 Z" fill="#ffffff" opacity="0.95"/>
+  <text x="114" y="144" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">BioCredit</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="12">
+    <rect x="62" y="182" width="202" height="38" rx="9" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="74" y="193" width="14" height="14" rx="3" fill="#a5b4fc"/>
+    <text x="100" y="205" fill="#ffffff" font-weight="600">Panel general</text>
+
+    <rect x="74" y="240" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="252" fill="#c7d2fe">Clientes</text>
+
+    <rect x="74" y="284" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="296" fill="#c7d2fe">Préstamos</text>
+
+    <rect x="74" y="328" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="340" fill="#c7d2fe">Cuotas</text>
+
+    <rect x="74" y="372" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="384" fill="#c7d2fe">Cobranzas</text>
+
+    <rect x="74" y="416" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="428" fill="#c7d2fe">Reportes</text>
+
+    <text x="74" y="500" fill="#818cf8" font-size="10" font-weight="700" letter-spacing="1.5">CONFIGURACIÓN</text>
+    <rect x="74" y="518" width="14" height="14" rx="3" fill="none" stroke="#a5b4fc" stroke-width="1.6"/>
+    <text x="100" y="530" fill="#c7d2fe">Parámetros</text>
+  </g>
+
+  <circle cx="88" cy="706" r="16" fill="#6366f1"/>
+  <text x="82" y="711" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">A</text>
+  <text x="114" y="703" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Administrador</text>
+  <text x="114" y="718" font-family="Inter, Arial, sans-serif" font-size="10" fill="#a5b4fc">Casa Matriz</text>
+
+  <!-- Encabezado del contenido -->
+  <text x="310" y="143" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Resumen general</text>
+  <text x="310" y="165" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">Cartera de créditos · actualizado hoy</text>
+  <rect x="1046" y="120" width="88" height="28" rx="14" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="1066" y="138" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#4f46e5">MODO DEMO</text>
+
+  <!-- KPIs -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="310" y="186" width="262" height="104" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="330" y="212" font-size="11" fill="#64748b">Cartera activa</text>
+    <text x="330" y="245" font-size="24" font-weight="700" fill="#0f172a">₲ 1.284.500.000</text>
+    <text x="330" y="269" font-size="10" fill="#059669">▲ 8,2% vs. mes anterior</text>
+
+    <rect x="590" y="186" width="262" height="104" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="610" y="212" font-size="11" fill="#64748b">Clientes activos</text>
+    <text x="610" y="245" font-size="24" font-weight="700" fill="#0f172a">1.248</text>
+    <text x="610" y="269" font-size="10" fill="#059669">▲ 32 nuevos este mes</text>
+
+    <rect x="870" y="186" width="262" height="104" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="890" y="212" font-size="11" fill="#64748b">Cuotas vencidas</text>
+    <text x="890" y="245" font-size="24" font-weight="700" fill="#0f172a">47</text>
+    <text x="890" y="269" font-size="10" fill="#dc2626">▼ 3,1% de la cartera</text>
+  </g>
+
+  <!-- Gráfico de cobranzas -->
+  <rect x="310" y="310" width="560" height="250" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="332" y="340" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Evolución de cobranzas</text>
+  <text x="332" y="358" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">Últimos 6 meses</text>
+  <g stroke="#eef2f7">
+    <line x1="332" y1="390" x2="846" y2="390"/>
+    <line x1="332" y1="437" x2="846" y2="437"/>
+    <line x1="332" y1="484" x2="846" y2="484"/>
+    <line x1="332" y1="531" x2="846" y2="531"/>
+  </g>
+  <path d="M332 520 L415 496 L498 508 L581 458 L664 470 L747 412 L846 396 L846 531 L332 531 Z" fill="url(#area)"/>
+  <path d="M332 520 L415 496 L498 508 L581 458 L664 470 L747 412 L846 396" fill="none" stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#ffffff" stroke="#6366f1" stroke-width="2.5">
+    <circle cx="332" cy="520" r="4"/><circle cx="415" cy="496" r="4"/><circle cx="498" cy="508" r="4"/>
+    <circle cx="581" cy="458" r="4"/><circle cx="664" cy="470" r="4"/><circle cx="747" cy="412" r="4"/><circle cx="846" cy="396" r="4"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">
+    <text x="330" y="548">Ene</text><text x="405" y="548">Feb</text><text x="488" y="548">Mar</text>
+    <text x="571" y="548">Abr</text><text x="654" y="548">May</text><text x="737" y="548">Jun</text>
+  </g>
+
+  <!-- Estado de cartera -->
+  <rect x="890" y="310" width="242" height="250" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="912" y="340" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Estado de cartera</text>
+  <g transform="translate(1011 440)">
+    <circle r="62" fill="none" stroke="#eef2ff" stroke-width="18"/>
+    <circle r="62" fill="none" stroke="#6366f1" stroke-width="18" stroke-dasharray="270 390" transform="rotate(-90)"/>
+    <circle r="62" fill="none" stroke="#34d399" stroke-width="18" stroke-dasharray="85 390" stroke-dashoffset="-270" transform="rotate(-90)"/>
+    <circle r="62" fill="none" stroke="#fbbf24" stroke-width="18" stroke-dasharray="35 390" stroke-dashoffset="-355" transform="rotate(-90)"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">92%</text>
+    <text x="0" y="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">al día</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">
+    <rect x="912" y="524" width="8" height="8" rx="2" fill="#6366f1"/><text x="926" y="532">Al día</text>
+    <rect x="982" y="524" width="8" height="8" rx="2" fill="#34d399"/><text x="996" y="532">En gracia</text>
+    <rect x="1062" y="524" width="8" height="8" rx="2" fill="#fbbf24"/><text x="1076" y="532">Mora</text>
+  </g>
+
+  <!-- Tabla de préstamos -->
+  <rect x="310" y="580" width="822" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="332" y="610" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Últimos préstamos</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">
+    <text x="332" y="636">CLIENTE</text><text x="600" y="636">PRODUCTO</text><text x="820" y="636">CUOTA</text><text x="1000" y="636">ESTADO</text>
+  </g>
+  <g stroke="#eef2f7"><line x1="332" y1="644" x2="1110" y2="644"/><line x1="332" y1="679" x2="1110" y2="679"/><line x1="332" y1="714" x2="1110" y2="714"/></g>
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#334155">
+    <text x="332" y="663">María González</text><text x="600" y="663">Crédito personal</text><text x="820" y="663">12 / 24</text>
+    <text x="332" y="698">Carlos Benítez</text><text x="600" y="698">Capital de trabajo</text><text x="820" y="698">08 / 18</text>
+    <text x="332" y="733">Lucía Martínez</text><text x="600" y="733">Consumo</text><text x="820" y="733">24 / 36</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="1000" y="650" width="72" height="20" rx="10" fill="#d1fae5"/><text x="1013" y="664" fill="#047857">Al día</text>
+    <rect x="1000" y="685" width="72" height="20" rx="10" fill="#d1fae5"/><text x="1013" y="699" fill="#047857">Al día</text>
+    <rect x="1000" y="720" width="72" height="20" rx="10" fill="#fef3c7"/><text x="1013" y="734" fill="#b45309">En gracia</text>
+  </g>
+</svg>
