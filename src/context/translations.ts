@@ -102,6 +102,29 @@ export interface TranslationDict {
   prod_li4: string;
   prod_li5: string;
   prod_btn: string;
+  credit_title: string;
+  credit_subtitle: string;
+  credit_pillar1_title: string;
+  credit_pillar1_desc: string;
+  credit_pillar2_title: string;
+  credit_pillar2_desc: string;
+  credit_pillar3_title: string;
+  credit_pillar3_desc: string;
+  credit_tab_dashboard: string;
+  credit_tab_loans: string;
+  credit_alt_dashboard: string;
+  credit_alt_loans: string;
+  credit_badge_dashboard: string;
+  credit_badge_loans: string;
+  credit_saas_badge: string;
+  credit_card_title: string;
+  credit_card_desc: string;
+  credit_li1: string;
+  credit_li2: string;
+  credit_li3: string;
+  credit_li4: string;
+  credit_li5: string;
+  credit_btn: string;
   faq_tag: string;
   faq_title: string;
   faq_subtitle: string;
@@ -306,6 +329,29 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     prod_li4: "Modelo SaaS por cuota mensual fija, sin costos de servidores ni sorpresas",
     prod_li5: "Actualizaciones automáticas, copias de seguridad en la nube y soporte continuo",
     prod_btn: "Solicitar Demo de BIOSHOP",
+    credit_title: "BioCredit",
+    credit_subtitle: "Software como Servicio (SaaS): gestiona clientes, préstamos, cuotas y cobranzas de tu casa de crédito desde una sola plataforma, con cumplimiento normativo en Paraguay y un plan mensual único.",
+    credit_pillar1_title: "Clientes & Simulación",
+    credit_pillar1_desc: "Ficha de clientes, validación de RUC y Cédula SET, simulador de crédito y aprobación con límites del BCP.",
+    credit_pillar2_title: "Préstamos & Cuotas",
+    credit_pillar2_desc: "Cartera de créditos, cronogramas, imputación legal de pagos (Art. 776 C.C.P.) y pagarés a la orden (Art. 1740).",
+    credit_pillar3_title: "Caja & Cobranzas",
+    credit_pillar3_desc: "Cobro rápido en ventanilla, recibos oficiales, informes BCP, PEP y exportaciones SIRO.",
+    credit_tab_dashboard: "Panel de Control",
+    credit_tab_loans: "Cartera de Préstamos",
+    credit_alt_dashboard: "BioCredit - Panel de control con métricas de cartera y cobranzas",
+    credit_alt_loans: "BioCredit - Cartera de préstamos y cuotas",
+    credit_badge_dashboard: "Vista Dashboard en Producción",
+    credit_badge_loans: "Vista Cartera en Producción",
+    credit_saas_badge: "Plataforma SaaS con Cuota Mensual Única",
+    credit_card_title: "Toda tu operación de créditos en una sola suscripción mensual",
+    credit_card_desc: "Olvídate de hojas de cálculo y sistemas desconectados. Con BioCredit accedes a una solución SaaS integral para gestionar clientes, simulaciones, desembolsos, cuotas y cobranzas, con reportes normativos y soporte continuo.",
+    credit_li1: "Gestión de clientes con validación de identidad y RUC/Cédula",
+    credit_li2: "Simulador de crédito con sistemas Francés, Alemán y Directo",
+    credit_li3: "Cartera de préstamos, cuotas e imputación de pagos según el Código Civil",
+    credit_li4: "Caja, recibos oficiales e informes BCP y SIRO en un solo lugar",
+    credit_li5: "Modelo SaaS por cuota mensual fija, sin servidores ni costos ocultos",
+    credit_btn: "Solicitar Demo de BioCredit",
     faq_tag: "Soporte",
     faq_title: "Preguntas Frecuentes",
     faq_subtitle: "Todo lo que necesitas saber sobre nuestras soluciones y procesos de trabajo",
@@ -506,6 +552,29 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     prod_li4: "Fixed monthly SaaS subscription without server or maintenance overhead",
     prod_li5: "Automatic cloud updates, scheduled backups, and dedicated support",
     prod_btn: "Request BIOSHOP Demo",
+    credit_title: "BioCredit",
+    credit_subtitle: "Software as a Service (SaaS): manage customers, loans, installments and collections for your lending company from a single platform, with regulatory compliance in Paraguay and one monthly plan.",
+    credit_pillar1_title: "Customers & Simulation",
+    credit_pillar1_desc: "Customer records, RUC and ID validation, loan simulator and approval with BCP limits.",
+    credit_pillar2_title: "Loans & Installments",
+    credit_pillar2_desc: "Loan portfolio, schedules, legal payment allocation (Art. 776 Civil Code) and promissory notes (Art. 1740).",
+    credit_pillar3_title: "Cash & Collections",
+    credit_pillar3_desc: "Fast counter collections, official receipts, BCP and PEP reports, and SIRO exports.",
+    credit_tab_dashboard: "Control Dashboard",
+    credit_tab_loans: "Loan Portfolio",
+    credit_alt_dashboard: "BioCredit - Control dashboard with portfolio and collections metrics",
+    credit_alt_loans: "BioCredit - Loan portfolio and installments",
+    credit_badge_dashboard: "Live Dashboard View",
+    credit_badge_loans: "Live Portfolio View",
+    credit_saas_badge: "SaaS Platform with a Single Monthly Plan",
+    credit_card_title: "Your entire lending operation in one monthly subscription",
+    credit_card_desc: "Forget spreadsheets and disconnected systems. BioCredit gives you a complete SaaS solution to manage customers, simulations, disbursements, installments and collections, with regulatory reporting and ongoing support.",
+    credit_li1: "Customer management with identity and RUC/ID validation",
+    credit_li2: "Loan simulator with French, German and Straight-Line methods",
+    credit_li3: "Loan portfolio, installments and payment allocation under the Civil Code",
+    credit_li4: "Cash desk, official receipts, BCP reports and SIRO in one place",
+    credit_li5: "Fixed monthly SaaS subscription, no servers or hidden costs",
+    credit_btn: "Request BioCredit Demo",
     faq_tag: "Support",
     faq_title: "Frequently Asked Questions",
     faq_subtitle: "Everything you need to know about our solutions and workflows",
@@ -706,6 +775,29 @@ export const translations: Record<SupportedLanguages, TranslationDict> = {
     prod_li4: "Modelo SaaS com mensalidade fixa, sem despesas de infraestrutura",
     prod_li5: "Atualizações automáticas na nuvem, backups e suporte dedicado",
     prod_btn: "Solicitar Demo do BIOSHOP",
+    credit_title: "BioCredit",
+    credit_subtitle: "Software como Serviço (SaaS): gerencie clientes, empréstimos, parcelas e cobranças da sua casa de crédito em uma única plataforma, com conformidade regulatória no Paraguai e um plano mensal único.",
+    credit_pillar1_title: "Clientes & Simulação",
+    credit_pillar1_desc: "Cadastro de clientes, validação de RUC e Cédula SET, simulador de crédito e aprovação com limites do BCP.",
+    credit_pillar2_title: "Empréstimos & Parcelas",
+    credit_pillar2_desc: "Carteira de créditos, cronogramas, imputação legal de pagamentos (Art. 776 C.C.P.) e notas promissórias (Art. 1740).",
+    credit_pillar3_title: "Caixa & Cobrança",
+    credit_pillar3_desc: "Cobrança rápida no balcão, recibos oficiais, relatórios BCP e PEP e exportações SIRO.",
+    credit_tab_dashboard: "Painel de Controle",
+    credit_tab_loans: "Carteira de Empréstimos",
+    credit_alt_dashboard: "BioCredit - Painel de controle com métricas de carteira e cobranças",
+    credit_alt_loans: "BioCredit - Carteira de empréstimos e parcelas",
+    credit_badge_dashboard: "Vista do Painel em Produção",
+    credit_badge_loans: "Vista da Carteira em Produção",
+    credit_saas_badge: "Plataforma SaaS com Mensalidade Única",
+    credit_card_title: "Toda a sua operação de crédito em uma única assinatura mensal",
+    credit_card_desc: "Esqueça planilhas e sistemas desconectados. Com o BioCredit você acessa uma solução SaaS completa para gerenciar clientes, simulações, desembolsos, parcelas e cobranças, com relatórios regulatórios e suporte contínuo.",
+    credit_li1: "Gestão de clientes com validação de identidade e RUC/Cédula",
+    credit_li2: "Simulador de crédito com sistemas Francês, Alemão e Direto",
+    credit_li3: "Carteira de empréstimos, parcelas e imputação de pagamentos pelo Código Civil",
+    credit_li4: "Caixa, recibos oficiais e relatórios BCP e SIRO em um só lugar",
+    credit_li5: "Modelo SaaS com mensalidade fixa, sem servidores nem custos ocultos",
+    credit_btn: "Solicitar Demo do BioCredit",
     faq_tag: "Suporte",
     faq_title: "Perguntas Frequentes",
     faq_subtitle: "Tudo o que você precisa saber sobre nossas soluções e processos de trabalho",

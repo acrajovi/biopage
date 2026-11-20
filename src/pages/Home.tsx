@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
+import { Credit } from '../components/Credit';
 import { FAQ } from '../components/FAQ';
 import { FreeTools } from '../components/FreeTools';
 import { Hero } from '../components/Hero';
@@ -33,6 +34,7 @@ export const Home: React.FC = () => {
       <Portfolio />
       <TechStack />
       <Products />
+      <Credit />
       <FreeTools />
       <FAQ />
       <Contact />

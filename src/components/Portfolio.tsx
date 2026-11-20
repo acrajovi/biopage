@@ -37,7 +37,7 @@ const PROJECTS: PortfolioProject[] = [
     title: 'BioCredit',
     category: 'system',
     tier: 'premium',
-    image: '/images/work/biocredit.svg',
+    image: '/images/work/biocredit-dashboard.jpg',
     badgeKey: 'port_sys_badge',
     descKey: 'port_p6_desc',
     linkKey: 'port_p6_link',
