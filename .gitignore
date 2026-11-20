@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 dist.zip
+biopage-dist.zip
+biopage-dist/
 *.local
 
 # Editor directories and files
