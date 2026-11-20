@@ -112,10 +112,10 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     {
       name: 'BioCredit',
       desc: t('apps_biocredit_desc'),
-      href: 'https://credit-demo.bio.com.py/',
+      href: '#credit',
       icon: 'fa-hand-holding-dollar',
       iconClass: 'bg-indigo-600 text-white',
-      internal: false,
+      internal: true,
     },
   ];
 
@@ -238,7 +238,7 @@ export const Header: React.FC<HeaderProps> = ({ scrolled }) => {
                       rel={app.internal ? undefined : 'noopener noreferrer'}
                       onClick={(e) => {
                         if (app.internal) {
-                          navigateToSection(e, 'products');
+                          navigateToSection(e, app.href.replace('#', ''));
                         } else {
                           setAppsDropdownOpen(false);
                           setMobileMenuOpen(false);
